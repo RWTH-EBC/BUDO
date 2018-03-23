@@ -1,7 +1,7 @@
 # BUDO
 Buildings Unified Data point naming schema for Operation management
 
-***GERMAN VERSION BELOW*
+***GERMAN VERSION BELOW***
 
 Contact persons:
 
