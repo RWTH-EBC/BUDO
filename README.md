@@ -5,17 +5,14 @@ Buildings Unified Data point naming schema for Operation management
 
 Contact persons:
 
-***E.ON Energy Research Center***
+**E.ON Energy Research Center**
 
-Florian Stinner
 
-fstinner@eonerc.rwth-aachen.de
+[Florian Stinner](fstinner@eonerc.rwth-aachen.de)
 
-***Fraunhofer Institute for Solar Energy Systems ISE***
+**Fraunhofer Institute for Solar Energy Systems ISE**
 
-Nicolas Réhault
-
-Nicolas.Rehault@ise.fraunhofer.de
+[Nicolas Réhault](Nicolas.Rehault@ise.fraunhofer.de)
 
 
 Building energy systems are often incorrectly controlled and therefore unnecessarily consume too much energy. Especially in non-residential buildings, Building automation systems offer the possibility to influence the control. A distinctive mark for the description of data points is their name. The scheme is often specified by the client or the scheme of the building automation manufacturer is used. In some cases, these are not even named according to a scheme. This individual designation makes it difficult to use automatic algorithms (analysis, error detection, operational management). 
