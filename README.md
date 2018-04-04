@@ -5,12 +5,16 @@ Buildings Unified Data point naming schema for Operation management
 
 Contact persons:
 
-E.ON Energy Research Center
+***E.ON Energy Research Center***
+
 Florian Stinner
+
 fstinner@eonerc.rwth-aachen.de
 
-Fraunhofer Institute for Solar Energy Systems ISE
+***Fraunhofer Institute for Solar Energy Systems ISE***
+
 Nicolas Réhault
+
 Nicolas.Rehault@ise.fraunhofer.de
 
 
