@@ -1,0 +1,10 @@
+Energy monitoring is strongly neglected in the construction process. Considering the costs in the life cycle of a building, the costs are particularly high in the use phase. As in owners and operators of non-residential buildings often do not share the same company, or person, costs for the implementation of equipment for energetic analysis will be charged. This results in plants that operate far beyond their efficiency range.
+
+
+Especially with the interplay of increasingly complex systems, it is particularly important to check the planned plant interaction with regard. Energy efficiency is becoming increasingly important. Continuous monitoring can offer a high potential for energy and cost savings in the long term. In particular, object-oriented plant monitoring offers the possibility of continuously optimizing the energy system of a building with standardized methods.
+
+
+For this reason, our investigations analyzed how object-oriented monitoring in the construction process can be integrated. To this end, it examines how the current documentation of the data recording in practice and how it looks like in standards and guidelines is formulated. It was examined whether a standardized data point assignment to installations and in which construction phases the data acquisition is integrated.
+
+
+Based on this, a process was developed which allows a continuous plant-specific data acquisition in planning and documentation during the construction process. For this an existing object-oriented data point key has been further developed and a tool for translating of data point keys into the new data point key. Afterwards showed how the standardized data point key can be used in the classical construction process. and can be integrated into the building process with Building Information Modeling (BIM). Furthermore, it was checked how the data point key was used for automatic evaluability can be.
