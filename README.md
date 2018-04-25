@@ -8,14 +8,14 @@ Contact persons:
 **E.ON Energy Research Center**
 
 
-[Florian Stinner](fstinner@eonerc.rwth-aachen.de)
+[Florian Stinner](mailto:fstinner@eonerc.rwth-aachen.de)
 
 **Fraunhofer Institute for Solar Energy Systems ISE**
 
-[Nicolas Réhault](Nicolas.Rehault@ise.fraunhofer.de)
+[Nicolas Réhault](mailto:Nicolas.Rehault@ise.fraunhofer.de)
 
 
-Building energy systems are often incorrectly controlled and therefore unnecessarily consume too much energy. Especially in non-residential buildings, Building automation systems offer the possibility to influence the control. A distinctive mark for the description of data points is their name. The scheme is often specified by the client or the scheme of the building automation manufacturer is used. In some cases, these are not even named according to a scheme. This individual designation makes it difficult to use automatic algorithms (analysis, error detection, operational management). 
+Building energy systems are often incorrectly controlled and therefore unnecessarily consume too much energy. Especially in non-residential buildings, Building automation systems offer the possibility to influence the control. A distinctive mark for the description of data points is their name. The scheme is often specified by the client or the scheme of the building automation manufacturer is used. In some cases, these are not even named according to a scheme. This individual designation makes it difficult to use automatic algorithms (analysis, error detection, operational management).
 
 A joint team from E.ON ERC and Fraunhofer ISE has tackled this problem and developed a standardized method for naming data points. This method is based on a method originally developed at Fraunhofer ISE for the designation of data points. This was further developed by E.ON ERC with the support of Fraunhofer ISE. It is entitled "Buildings Unified Data point naming schema for Operation management" (or BUDO for short) and is specially designed for the demands of energy system analysis and operational management. It can be used in new and existing buildings. This means that developed automated methods can be implemented in both new and existing buildings.
 
@@ -29,7 +29,7 @@ By selecting optional designations or numbering, the designations used in the da
 
 ***German version***
 
-Gebäudeenergiesysteme sind oftmals falsch geregelt und verbrauchen deshalb unnötigerweise zu viel Energie. Gebäudeautomationssysteme bieten insbesondere in Nichtwohngebäuden die Möglichkeit einen Einfluss auf die Regelung zu nehmen. Ein Erkennungszeichen für die Beschreibung von Datenpunkten ist ihr Name. Das Schema wird häufig vom Bauherr vorgegeben oder das Schema des Gebäudeautomationsherstellers wird verwendet. Teilweise werden diese auch gar nicht nach einem Schema benannt. Diese individuelle Bezeichnung erschwert die Anwendung von automatischen Algorithmen (Analyse, Fehlererkennung, Betriebsführung). 
+Gebäudeenergiesysteme sind oftmals falsch geregelt und verbrauchen deshalb unnötigerweise zu viel Energie. Gebäudeautomationssysteme bieten insbesondere in Nichtwohngebäuden die Möglichkeit einen Einfluss auf die Regelung zu nehmen. Ein Erkennungszeichen für die Beschreibung von Datenpunkten ist ihr Name. Das Schema wird häufig vom Bauherr vorgegeben oder das Schema des Gebäudeautomationsherstellers wird verwendet. Teilweise werden diese auch gar nicht nach einem Schema benannt. Diese individuelle Bezeichnung erschwert die Anwendung von automatischen Algorithmen (Analyse, Fehlererkennung, Betriebsführung).
 
 Ein gemeinsames Team vom E.ON ERC und Fraunhofer ISE hat sich dieser Problematik angenommen und ein standardisiertes Verfahren für die Benennung von Datenpunkten entwickelt. Dieses Verfahren basiert auf einem ursprünglich am Fraunhofer ISE entwickeltem Verfahren für die Bezeichnung von Datenpunkten. Dieser wurde vom E.ON ERC unter Unterstützung des Fraunhofer ISE weiterentwickelt. Er trägt den Titel "Buildings Unified Data point naming schema for Operation management" (oder kurz BUDO) und ist speziell für die Ansprüche in der Energiesystemanalyse und der Betriebsführung konzipiert. Er kann in Neubauten und in bestehenden Gebäuden angewendet werden. So können entwickelte automatisierte Methoden gleichermaßen im Neubau und im Bestand ausgeführt werden.
 
@@ -40,6 +40,6 @@ Die Struktur des Datenpunktes ist sehr einfach. Es gibt am Anfang Platz für ein
 
 Durch die Auswahl von optionalen Bezeichnungen bzw. Nummerierungen können die im Bestand verwendeten Bezeichnungen integriert werden. Somit können die einzelnen Datenpunkten auch weiterhin auf vorhandenen Plänen erkannt werden. Auch können diese manuellen Angaben für die Datenvisualisierung von Kunden genutzt werden.
 
- 
-We thank the BMWi (Federal Ministry of Economics and Energy) for their financial support, 
+
+We thank the BMWi (Federal Ministry of Economics and Energy) for their financial support,
 Contribution numbers 03ET1022A, 03SBE0006A, 03ET1373A.
