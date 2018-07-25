@@ -9,7 +9,7 @@ sns.set(style="whitegrid", color_codes=True)
 # np.random.seed(sum(map(ord, "categorical")))
 # titanic = sns.load_dataset("titanic")
 
-d = {'number of observations': [27, 17, 14, 10, 9, 8, 5, 4, 3, 3], 
+d = {'number of observations': [26, 18, 15, 11, 10, 9, 5, 4, 4, 3], 
      'categories': ["building", 
                     "floor device",
                     "facility/site/\nplant",
