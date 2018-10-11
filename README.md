@@ -22,7 +22,7 @@ A joint team from E.ON ERC and Fraunhofer ISE has tackled this problem and devel
 To make this key practical, an easy-to-use Excel tool has been developed. This allows the original name to be inserted and then named using the standardized naming scheme. The individual parts of the data point key can be selected in a dropdown menu and thus the name of a data point can be compiled. The tool can be called up under the following link: https://github.com/RWTH-EBC/BUDO.
 
 
-The structure of the data point is very simple. There is space at the beginning for an individual name. This means that every operator can map his organizational structure in the schema. This is separated from the standardized part of the data point key by a "//". Then the categories "System", "Component/Subsystem", "Medium/Position", "Type" and "Function type" can be selected. These have several specifications, so that it is possible to select very precisely to which plant and system a data point is assigned, where it is located and what type it represents.
+The structure of the data point is very simple. There is space at the beginning for an individual name. This means that every operator can map his organizational structure in the schema. This is separated from the standardized part of the data point key by a "_._". Then the categories "System", "Component/Subsystem", "Medium/Position", "Type" and "Function type" can be selected. These have several specifications, so that it is possible to select very precisely to which plant and system a data point is assigned, where it is located and what type it represents.
 
 By selecting optional designations or numbering, the designations used in the database can be integrated. This means that the individual data points can still be recognized on existing plans. These manual specifications can also be used for the data visualization of customers.
 
@@ -36,10 +36,21 @@ Ein gemeinsames Team vom E.ON ERC und Fraunhofer ISE hat sich dieser Problematik
 Damit dieser Schlüssel auch einfach praktisch angewendet werden kann, wurde ein einfach zu bedienendes Excel-Tool entwickelt. Hiermit kann der Original-Name eingefügt werden und dann mit dem standardisierten Benennungsschema benannt werden. Hierbei kann in einem Dropdown-Menü die einzelnen Teile des Datenpunktschlüssels ausgewählt und somit der Name eines Datenpunktes zusammengestellt werden. Das Tool kann unter folgendem Link abgerufen werden: https://github.com/RWTH-EBC/BUDO.
 
 
-Die Struktur des Datenpunktes ist sehr einfach. Es gibt am Anfang Platz für eine individuelle Bezeichnung. Somit kann jeder Betreiber seine Organisationsstruktur im Schema abbilden. Diese wird durch ein "//" von dem standardisierten Teil des Datenpunktschlüssels abgetrennt. Danach können die Kategorien "System", "Bauteil/Subsystem", "Medium/Position" , "Typ" und "Funktionsart" ausgewählt werden. Diese haben mehrere Spezifizierungen, so dass sehr genau ausgewählt werden kann, zu welcher Anlage und System ein Datenpunkt zugewiesen ist, wo sich dieser befindet und was für einen Typ er wiedergibt.
+Die Struktur des Datenpunktes ist sehr einfach. Es gibt am Anfang Platz für eine individuelle Bezeichnung. Somit kann jeder Betreiber seine Organisationsstruktur im Schema abbilden. Diese wird durch ein "_._" von dem standardisierten Teil des Datenpunktschlüssels abgetrennt. Danach können die Kategorien "System", "Bauteil/Subsystem", "Medium/Position" , "Typ" und "Funktionsart" ausgewählt werden. Diese haben mehrere Spezifizierungen, so dass sehr genau ausgewählt werden kann, zu welcher Anlage und System ein Datenpunkt zugewiesen ist, wo sich dieser befindet und was für einen Typ er wiedergibt.
 
 Durch die Auswahl von optionalen Bezeichnungen bzw. Nummerierungen können die im Bestand verwendeten Bezeichnungen integriert werden. Somit können die einzelnen Datenpunkten auch weiterhin auf vorhandenen Plänen erkannt werden. Auch können diese manuellen Angaben für die Datenvisualisierung von Kunden genutzt werden.
 
+
+### How to cite BUDO
+
+We continuously improve **BUDO** and try to keep the community up-to-date with citable papers:
+
+- Structuring building monitoring and automation system data.
+  Stinner F., Kornas A., Baranski M., Müller D..
+  The REHVA European HVAC Journal, vol. 55, no. 4, pp. 10–15, 2018.
+  [link](https://www.rehva.eu/fileadmin/user_upload/10-15_RJ1804_WEB.pdf)
+
+### Acknowledgement
 
 We thank the BMWi (Federal Ministry of Economics and Energy) for their financial support,
 Contribution numbers 03ET1022A, 03SBE0006A, 03ET1373A.
