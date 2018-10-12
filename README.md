@@ -48,7 +48,21 @@ We continuously improve **BUDO** and try to keep the community up-to-date with c
 - Structuring building monitoring and automation system data.
   Stinner F., Kornas A., Baranski M., Müller D..
   The REHVA European HVAC Journal, vol. 55, no. 4, pp. 10–15, 2018.
-  [link](https://www.rehva.eu/fileadmin/user_upload/10-15_RJ1804_WEB.pdf)
+  [Link to PDF File](https://www.rehva.eu/fileadmin/user_upload/10-15_RJ1804_WEB.pdf)
+
+Bibtex:
+```
+@incollection{Stinner.2018,
+ author = {Stinner, Florian and Kornas, Alina and Baranski, Marc and M{\"u}ller, Dirk},
+ title = {Structuring building monitoring and automation system data},
+ url = {https://www.rehva.eu/fileadmin/user_upload/10-15_RJ1804_WEB.pdf},
+ pages = {10--15},
+ series = {The REHVA European HVAC Journal},
+ editor = {REHVA},
+ booktitle = {The REHVA European HVAC Journal - August 2018},
+ year = {2018}
+}
+```
 
 ### Acknowledgement
 
