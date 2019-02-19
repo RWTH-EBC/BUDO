@@ -11,7 +11,7 @@ Building energy systems are often incorrectly controlled and therefore unnecessa
 
 A team from E.ON ERC has tackled this problem and developed a standardized method for naming data points. This method is based on a method originally developed at Fraunhofer ISE for the designation of data points. This was further developed by E.ON ERC with the support of Fraunhofer ISE. It is entitled "Buildings Unified Data point naming schema for Operation management" (or BUDO Schema for short) and is specially designed for the demands of energy system analysis and operational management. It can be used in new and existing buildings. This means that developed automated methods can be implemented in both new and existing buildings.
 
-To make this key practical, an easy-to-use Excel tool has been developed. This allows the original name to be inserted and then named using the standardized naming scheme. The individual parts of the data point key can be selected in a dropdown menu and thus the name of a data point can be compiled. The tool can be called up under the following link: https://github.com/RWTH-EBC/BUDO/Excel-Table.
+To make this key practical, an easy-to-use Excel tool has been developed. This allows the original name to be inserted and then named using the standardized naming scheme. The individual parts of the data point key can be selected in a dropdown menu and thus the name of a data point can be compiled. The tool can be called up under the following link: https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table.
 
 The structure of the data point is very simple. There is space at the beginning for individual categories. This means that every operator can map his organizational structure in the schema. We have made categories of 40 publicly available standards mapable for the description of building automation data. A user of BUDO can choose which categories are useful for him. Each category can be provided with its own designation. This makes it possible, for example, to map your own building assignments. In the Excel tool, 5 free categories are displayed for this purpose. However, it is also possible to add further user-specific categories. 
 
@@ -19,7 +19,7 @@ This first part is separated from the standardized part of the data point key by
 
 By selecting optional designations or numbering, the designations used before can be integrated. This means that the individual data points can still be recognized on existing plans. These manual specifications can also be used for the data visualization of customers.
 
-You can access the Excel tool via the following [link](../Excel-Table/).
+You can access the Excel tool via the following [link](../tree/master/Excel-Table/).
 
 ### How to cite BUDO
 
