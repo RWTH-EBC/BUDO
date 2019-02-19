@@ -19,7 +19,7 @@ This first part is separated from the standardized part of the data point key by
 
 By selecting optional designations or numbering, the designations used before can be integrated. This means that the individual data points can still be recognized on existing plans. These manual specifications can also be used for the data visualization of customers.
 
-You can access the Excel tool via the following [link](../tree/master/Excel-Table/).
+You can access the Excel tool via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table).
 
 ### How to cite BUDO
 
