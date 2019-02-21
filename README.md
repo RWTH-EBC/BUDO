@@ -45,7 +45,7 @@ We use MySQL as database. Download the [MySQL ODBC 5.1 Driver ](https://dev.mysq
 
 Install and start the ODBC data source administrator (32-bit version!).
 
-![start the ODBC data source administrator](./Resources/Images/MySQL_1.png)
+![start the ODBC data source administrator](./Resources/Images/MySQL_1.PNG)
 
 ## Step 3: Set database DSN
 
@@ -57,7 +57,7 @@ Use the following connection parameters:
 
 The exact server and password data can be requested from the [BUDO Schema team](mailto:info@budo-schema.de). You will receive access as soon as possible.
 
-![Connection configuration](./Resources/Images/MySQL_2.png)
+![Connection configuration](./Resources/Images/MySQL_2.PNG)
 
 ## Step 4: Set up SSL connection
 
@@ -69,7 +69,7 @@ Under `details` the setting for the `SSL` key can be selected. The path of the S
 
 The connection can be tested under `Test`. If the test is successful, a window appears with `Connection successful`.
 
-![Connection configuration](./Resources/Images/MySQL_3.png)
+![Connection configuration](./Resources/Images/MySQL_3.PNG)
 
 ## Step 5: Initialize BUDO Creator
 
@@ -77,7 +77,7 @@ The `Excel-Table` folder contains two Excel tables (`BUDO_Creator_Master.xlsm` a
 
 When you open the `BUDO_Creator.xlsm`, you will be asked if you want to load the database. This can be helpful when opening the database for the first time. With a click on `yes`, the database is loaded. Caution: this process may take longer.
 
-![BUDO first prompt](./Resources/Images/BUDO_1.png)
+![BUDO first prompt](./Resources/Images/BUDO_1.PNG)
 
 You start at the `BUDO key` worksheet, where you can create your individual BUDO keys. Let's switch to the `Save` worksheet. Here you can configurate the BUDO Creator. You have five buttons and eight settings (where only three settings are switched active).
 
@@ -108,7 +108,7 @@ The button `Init Table` uses all functions described above one after the other. 
 * `Update changes`
 * `Change Language`
 
-![BUDO settings](./Resources/Images/BUDO_2.png)
+![BUDO settings](./Resources/Images/BUDO_2.PNG)
 
 
 # Usage of BUDO Creator
