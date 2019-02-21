@@ -92,7 +92,7 @@ In the following settings, you can set the separators to be used for BUDO, Categ
 The other settings allow to hide unused categories and not to use them. This is also not implemented yet.
 
 Now we introduce the five buttons. 
-`Load Database` loads all vocabulary from our database. This takes a minute or more. 
+`Load Database` loads all vocabulary from our database. This takes a minute or more.
 
 `Set Number` sets the `Number of data points` in the `BUDO key` worksheet. This includes all formulas, that are needed. Caution: Use only at the beginning for initializing. If you use it later, this function overwrites the first `Number of data points` lines.
 
