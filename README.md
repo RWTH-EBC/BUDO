@@ -142,10 +142,6 @@ Bibtex:
 }
 ```
 
-**Contact Fraunhofer Institute for Solar Energy Systems ISE for original scheme**
-
-[Nicolas Réhault](mailto:Nicolas.Rehault@ise.fraunhofer.de)
-
 
 ### Acknowledgement
 
