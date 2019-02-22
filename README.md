@@ -14,16 +14,16 @@ To make this key practical, an easy-to-use Excel tool has been developed. This a
 
 The structure of the data point is very simple. There is space at the beginning for individual categories. This means that every operator can map his organizational structure in the schema. We have made categories of 40 publicly available standards mapable for the description of building automation data. A user of BUDO can choose which categories are useful for him. Each category can be provided with its own designation. This makes it possible, for example, to map your own building assignments. In the Excel tool, 5 free categories are displayed for this purpose. However, it is also possible to add further user-specific categories. 
 
-This first part is separated from the standardized part of the data point key by a "_._". Then the categories "System", "Subsystem", "Subsubsystem", "Medium/Position", "Signal type" and "Function type" can be selected. These have several specifications, so that it is possible to select very precisely to which plant and system a data point is assigned, where it is located and what type it represents. Each category has its own abbreviation, so that everyone can see which category is described here.
+This first part is separated from the standardized part of the data point key by a "\_.\_". Then the categories "System", "Subsystem", "Subsubsystem", "Medium/Position", "Signal type" and "Function type" can be selected. These have several specifications, so that it is possible to select very precisely to which plant and system a data point is assigned, where it is located and what type it represents. Each category has its own abbreviation, so that everyone can see which category is described here.
 
 By selecting optional designations or numbering, the designations used before can be integrated. This means that the individual data points can still be recognized on existing plans. These manual specifications can also be used for the data visualization of customers.
 
-At the end, 5 more free categories can be added (e.g. unit). These are separated from the rest of the standard by a "_._" at the beginning.
+At the end, 5 more free categories can be added (e.g. unit). These are separated from the rest of the standard by a "\_.\_" at the beginning.
 
 You can access the BUDO Creator via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table).
 
 
-# Basic principle of BUDO
+# Basic principles of BUDO
 
 
 
@@ -55,7 +55,7 @@ Use the following connection parameters:
 * port: 3306
 * database: budo_schema
 
-The exact server and password data can be requested from the [BUDO Schema team](mailto:info@budo-schema.de). You will receive access as soon as possible.
+The exact server, user and password data can be requested from the [BUDO Schema team](mailto:info@budo-schema.de). You will receive access as soon as possible.
 
 ![Connection configuration](./Resources/Images/MySQL_2.PNG)
 
