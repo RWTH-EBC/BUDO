@@ -8,29 +8,33 @@ Contact:
 
 Building energy systems are often incorrectly controlled and therefore unnecessarily consume too much energy. Especially in non-residential buildings, Building automation systems offer the possibility to influence the control. A distinctive mark for the description of data points is their name. The scheme is often specified by the client or the scheme of the building automation manufacturer is used. In some cases, these are not even named according to a scheme. This individual designation makes it difficult to use automatic algorithms (analysis, error detection, operational management).
 
-A team from E.ON ERC has tackled this problem and developed a standardized method for naming data points. This method is based on a method originally developed at Fraunhofer ISE for the designation of data points. This was further developed by E.ON ERC with the support of Fraunhofer ISE. It is entitled "Buildings Unified Data point naming schema for Operation management" (or BUDO Schema for short) and is specially designed for the demands of energy system analysis and operational management. It can be used in new and existing buildings. This means that developed automated methods can be implemented in both new and existing buildings.
+A team from E.ON ERC has tackled this problem and developed a standardized method for naming data points. This method is based on a method originally developed at Fraunhofer ISE for the designation of data points. This was further developed by E.ON ERC with the support of Fraunhofer ISE. It is entitled ```Buildings Unified Data point naming schema for Operation management``` (or ```BUDO Schema``` for short) and is specially designed for the demands of energy system analysis and operational management. It can be used in new and existing buildings. This means that developed automated methods can be implemented in both new and existing buildings.
 
 To make this key practical, an easy-to-use Excel tool has been developed. This allows the original name to be inserted and then named using the standardized naming scheme. The individual parts of the data point key can be selected in a dropdown menu and thus the name of a data point can be compiled. The tool can be called up under the following link: https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table.
 
-The structure of the data point is very simple. There is space at the beginning for individual categories. This means that every operator can map his organizational structure in the schema. We have made categories of 40 publicly available standards mapable for the description of building automation data. A user of BUDO can choose which categories are useful for him. Each category can be provided with its own designation. This makes it possible, for example, to map your own building assignments. In the Excel tool, 5 free categories are displayed for this purpose. However, it is also possible to add further user-specific categories. 
+The structure of the data point is very simple. There is space at the beginning for individual categories. This means that every operator can map his organizational structure in the schema. We have made categories of 40 publicly available standards mapable for the description of building automation data. A user of BUDO can choose which categories are useful for him. Each category can be provided with its own designation. This makes it possible, for example, to map your own building assignments. In the Excel tool, 5 free categories are displayed for this purpose. However, it is also possible to add further user-specific categories.
 
-This first part is separated from the standardized part of the data point key by a "§". Then the categories "System", "Subsystem", "Subsubsystem", "Medium/Position", "Signal type" and "Function type" can be selected. These have several specifications, so that it is possible to select very precisely to which plant and system a data point is assigned, where it is located and what type it represents. Each category has its own abbreviation, so that everyone can see which category is described here.
+This first part is separated from the standardized part of the data point key by a ```§```. Then the categories ```System```, ```Subsystem```, ```Subsubsystem```, ```Medium/Position```, ```Signal type``` and ```Function type``` can be selected. These have several specifications, so that it is possible to select very precisely to which plant and system a data point is assigned, where it is located and what type it represents. Each category has its own abbreviation, so that everyone can see which category is described here.
 
 By selecting optional designations or numbering, the designations used before can be integrated. This means that the individual data points can still be recognized on existing plans. These manual specifications can also be used for the data visualization of customers.
 
-At the end, 5 more free categories can be added (e.g. unit). These are separated from the rest of the standard by a "§" at the beginning.
+At the end, 5 more free categories can be added (e.g. unit). These are separated from the rest of the standard by a ```§``` at the beginning.
 
 You can access the BUDO Creator via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table).
 
 # Basic principles of BUDO
 
-The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary.md). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary.md) which free categories and which specifications you can use here.
+The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary) which free categories and which specifications you can use here. The german documentation is mapped [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_budo_vokabular) and [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_freie_kategorien).
 
 # Usage of BUDO Creator
 
-The installation instructions can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/installation_budo_creator.md).
+The installation instructions can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/installation_budo_creator).
 
-A instruction how to use the BUDO Creator can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/usage_budo_creator.md).
+A instruction how to use the BUDO Creator can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/usage_budo_creator).
+
+# Wiki of BUDO Schema
+
+In our [wiki](https://github.com/RWTH-EBC/BUDO/wiki), you can find some tutorials, documentations and recommendations of BUDO.
 
 # Reference
 
@@ -57,8 +61,7 @@ Bibtex:
 }
 ```
 
-
-### Acknowledgement
+# Acknowledgement
 
 We thank the BMWi (Federal Ministry of Economics and Energy) for their financial support,
 Contribution numbers 03ET1022A, 03SBE0006A, 03ET1373A.
