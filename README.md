@@ -24,7 +24,7 @@ You can access the BUDO Creator via the following [link](https://github.com/RWTH
 
 # Basic principles of BUDO
 
-The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary) which free categories and which specifications you can use here. The german documentation is mapped [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_budo_vokabular) and [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_freie_kategorien).
+The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_free_categories) which free categories and which specifications you can use here. The german documentation is mapped [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_budo_vokabular) and [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_freie_kategorien).
 
 # Usage of BUDO Creator
 
