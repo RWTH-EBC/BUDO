@@ -24,13 +24,13 @@ You can access the BUDO Creator via the following [link](https://github.com/RWTH
 
 # Basic principles of BUDO
 
-The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_budo_vocabulary). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/documentation_free_categories) which free categories and which specifications you can use here. The german documentation is mapped [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_budo_vokabular) and [here](https://github.com/RWTH-EBC/BUDO/wiki/dokumentation_freie_kategorien).
+The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/Documentation-BUDO-vocabulary). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/Documentation-free-categories) which free categories and which specifications you can use here. The german documentation is mapped [here](https://github.com/RWTH-EBC/BUDO/wiki/Dokumentation-BUDO-Vokabular) and [here](https://github.com/RWTH-EBC/BUDO/wiki/Dokumentation-freie-Kategorien).
 
 # Usage of BUDO Creator
 
-The installation instructions can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/installation_budo_creator).
+The installation instructions can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/Installation-BUDO-creator).
 
-A instruction how to use the BUDO Creator can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/usage_budo_creator).
+A instruction how to use the BUDO Creator can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/Usage-BUDO-creator).
 
 # Wiki of BUDO Schema
 
@@ -38,7 +38,7 @@ In our [wiki](https://github.com/RWTH-EBC/BUDO/wiki), you can find some tutorial
 
 # Reference
 
-We continuously improve **BUDO** and try to keep the community up-to-date with citable papers. Additional papers for usage, tools and tool chains can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/papers.md).
+We continuously improve **BUDO** and try to keep the community up-to-date with citable papers. Additional papers for usage, tools and tool chains can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/Papers).
 
 The actual main paper of **BUDO** is the following, but the paper reproduce not the actual status of **BUDO**:
 
