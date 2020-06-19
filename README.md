@@ -20,7 +20,7 @@ By selecting optional designations or numbering, the designations used before ca
 
 At the end, three more free categories can be added (e.g. unit). These are separated from the rest of the standard by a ```§``` at the beginning.
 
-You can access the BUDO Creator via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table).
+You can access the Excel BUDO Creator via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table). A Google Spreadsheet version is for testing available under the following [link](https://docs.google.com/spreadsheets/d/1irBxSYUZWAnswR2uyZlXsgReJTcwf_vETIxmwAzKYMQ/edit#gid=0). If you need a personal version of the Google Spreadsheet version, please contact the [BUDO Schema Team](mailto:info@budo-schema.de). We will provide the spreadsheet very soon.
 
 # Basic principles of BUDO
 
