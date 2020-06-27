@@ -7,211 +7,179 @@ import warnings
 
 
 class Budo(object):
-    def __init__(self, language='English', separator_budo='#', separator_category='_',
-                 separator_specification='+'):
+    def __init__(self, language='English', separator_budo='§', separator_category='_',
+                 separator_specification='+', separator_designation='-', budo_file='budo_db.ini', translate=True):
         self.sep_budo = separator_budo
         self.sep_cat = separator_category
         self.sep_spec = separator_specification
+        self.sep_desig = separator_designation
+        self.language = language
 
         config = configparser.ConfigParser()
-        config.read('budo_db.ini')
+        config.read(budo_file)
         self.connection = pymysql.connect(host=config["budo"]["server"], port=int(config["budo"]["port"]),
                                           user=config["budo"]["user"],
                                           passwd=config["budo"]["password"], db=config["budo"]["database"])
-        # cursor = connection.cursor()
-        # cursor.execute("SELECT * FROM abbreviation")
-        # abbreviations = cursor.fetchall()
-        query = "SELECT * FROM `abbreviation`"
-        self.abb = pd.read_sql(query, self.connection)
-        query = "SELECT * FROM `view.category_assignment`"
-        self.ca = pd.read_sql(query, self.connection)
-        query = "SELECT * FROM `view.parent_children`"
-        self.pc = pd.read_sql(query, self.connection)
-        query = "SELECT * FROM `languages`"
-        languages = pd.read_sql(query, self.connection)
-        self.c_abb = languages[languages['language'] == language]['column_abbreviation'][1]
-        self.c_cat = languages[languages['language'] == language]['column_category'][1]
-        self.c_par = languages[languages['language'] == language]['column_parent'][1]
-        self.c_chi = languages[languages['language'] == language]['column_children'][1]
+        query = "SELECT * FROM `cpc_all`"
+        self.cpc_all = pd.read_sql(query, self.connection)
+        query = "SELECT * FROM `view.category`"
+        self.categories = pd.read_sql(query, self.connection)
+        self.translate = translate
+        if translate:
+            self.dict_cpc = self.get_index()
+            self.dict_cat_budo = self._init_translation()
 
-        self.categories_db = {'System': 'System',
-                              'Subsystem': 'System',
-                              'Subsubsystem': 'System',
-                              'Medium': 'Medium',
-                              'Medium 2nd specification': 'Medium 2nd specification',
-                              'Medium 3rd specification': 'Medium 3rd specification',
-                              'Signal type': 'Signal type',
-                              'Signal type 2nd specification': 'Signal type 2nd specification',
-                              'Function type': 'Function type'}
+    def _init_translation(self):
+        dict_cat_budo = dict()
+        categories_dict_orig = {"medium 2nd specification": "medium specification 2",
+                                "medium 3rd specification": "medium specification 3",
+                                "signal type 2nd specification": "signal type specification 2",
+                                "signal type 3rd specification": "signal type specification 3"}
+        self.categories_budo = self.categories[["name_english", "budo"]]
+        for index, row in self.categories_budo.iterrows():
+            if row["name_english"] in categories_dict_orig.keys():
+                dict_cat_budo[categories_dict_orig[row["name_english"]]] = row["budo"]
+            else:
+                dict_cat_budo[row["name_english"]] = row["budo"]
+        return dict_cat_budo
 
-        self.categories_real = [['System', 'System specification', 'System designation'],
-                                ['Subsystem', 'Subsystem specification', 'Subsystem designation'],
-                                ['Subsubsystem', 'Subsubsystem specification', 'Subsubsystem designation'],
-                                ['Medium', 'Medium specification', 'Medium 2nd specification',
-                                 'Medium 3rd specification'],
-                                ['Signal type', 'Signal type specification', 'Signal type 2nd specification'],
-                                ['Function type']]
+    def get_index(self):
+        cat_budo_stand = self.categories[self.categories['comment'] == 'not used as abbreviation']["budo"].tolist()
 
-    def get_translation(self, budo_keys):
-        budo_parts = self.decompose_budo_key(budo_keys)
-        budo_key_list = [""] * 3
-        budo_key_list[0] = self.get_translation_outside_parts(budo_parts[0])
-        budo_key_list[1] = self.translate_budo_part(budo_parts[1])
-        budo_key_list[2] = self.get_translation_outside_parts(budo_parts[2])
+        df = self.cpc_all[['category_english', 'category_german', 'category_budo',
+                           'ca_english', 'ca_german', 'ca_budo',
+                           'children_english', 'children_german', 'children_budo']]
 
-        return budo_key_list
+        # categories = self.categories[['name_english']]
+        dict_all = dict()
+        for index, row in self.categories.iterrows():
+            budo_cat = row["budo"]
 
-    def decompose_budo_key(self, budo_key):
-        budo_decompose = [""] * 3
-        raw_key = budo_key.split(self.sep_budo)
+            dict_cat = dict()
+            dict_cat["name_english"] = row["name_english"]
+            dict_cat["name_german"] = row["name_german"]
+            if row["parent_category_id"] > 0:
+                name_category = row["parent_category_english"]
+            else:
+                name_category = row['name_english']
+            cas = df[df['category_english'] == name_category]['ca_english'].unique()
+            df_cas = df[df['category_english'] == name_category]
+            for ca in cas:
+                if ca is not None:
+                    dict_ca = dict()
+                    dict_ca["name_english"] = ca
+                    dict_ca["name_german"] = df_cas[df_cas.ca_english == ca]["ca_german"].iloc[0]
 
-        if len(raw_key) == 1:
-            budo_decompose[0] = []
-            budo_decompose[1] = raw_key[0].split(self.sep_cat)
-            budo_decompose[2] = []
+                    df_ca = df_cas[df_cas.ca_english == ca]
+                    children = df_cas[df_cas.ca_english == ca]['children_english'].tolist()
 
-        elif len(raw_key) == 2:
-            if raw_key[0].count(self.sep_cat) >= raw_key[1].count(self.sep_cat):
-                budo_decompose[0] = []
-                budo_decompose[1] = raw_key[0].split(self.sep_cat)
-                budo_decompose[2] = raw_key[1].split(self.sep_cat)
+                    for child in children:
+                        if child is not None:
+                            dict_child = dict()
+                            dict_child["name_english"] = child
+                            dict_child["name_german"] = df_ca[df_ca.children_english == child]["children_german"].iloc[0]
 
-            elif raw_key[0].count(self.sep_cat) < raw_key[1].count(self.sep_cat):
-                budo_decompose[0] = raw_key[0].split(self.sep_cat)
-                budo_decompose[1] = raw_key[1].split(self.sep_cat)
-                budo_decompose[2] = []
+                            budo_child = df_ca[df_ca.children_english == child]["children_budo"].iloc[0]
+                            if budo_child is not None:
+                                if budo_cat in cat_budo_stand:
+                                    dict_ca[budo_child] = dict_child
+                                else:
+                                    dict_cat[budo_child] = dict_child
 
-        elif len(raw_key) == 3:
-            budo_decompose[0] = raw_key[0].split(self.sep_cat)
-            budo_decompose[1] = raw_key[1].split(self.sep_cat)
-            budo_decompose[2] = raw_key[2].split(self.sep_cat)
-        else:
-            raise RuntimeError('{} {} {}'.format('Key', budo_key, 'is not in Budo format'))
+                    budo_ca = df_cas[df_cas.ca_english == ca]["ca_budo"].iloc[0]
+                    if budo_ca is not None:
+                        dict_cat[budo_ca] = dict_ca
+            dict_all[budo_cat] = dict_cat
+        return dict_all
 
-        return budo_decompose
+    def split(self, budo_keys, translate=None):
+        if translate is None:
+            translate = self.translate
 
-    def translate_budo_part(self, budo_part):
-        # print(self.c_abb)
-        budo_part_list = []
-        last_element = ""
-        for key, cat_r in zip(budo_part, self.categories_real):
-            temp_list = []
-            raw_element = self.decompose_element(key)
+        dict_keys = dict()
+        budo_cat = ""
+        budo_ca = ""
+        # budo_child = ""
+        categories = ["system", "subsystem", "subsubsystem",
+                      "medium", "signal type", "function type"]
 
-            for element, cat_temp in zip(raw_element, cat_r):
-                if cat_temp in self.categories_db:
-                    translation = self.get_translation_category(element, cat_temp)
+        language = self.language.lower()
 
-                elif "designation" in cat_temp:
-                    if len(element) > 0:
-                        translation = element
-                    else:
-                        translation = ""
-                else:
-                    _, translation = self.get_translation_children(last_element, element)
-                last_element = element
-                temp_list.append([cat_temp, translation])
-            budo_part_list.append(temp_list)
-        return budo_part_list
+        for n, key in enumerate(budo_keys, start=0):
+            dict_key = dict()
+            free_cat_enumerator = 1
+            name_category = ""
+            parts = key.split(self.sep_budo)
+            for i, part in enumerate(parts, start=0):
+                elements = part.split(self.sep_cat)
+                for j, element in enumerate(elements, start=0):
+                    if i in [0, 2]:
+                        name_category = "free category " + str(free_cat_enumerator)
+                        free_cat_enumerator += 1
+                    elif i == 1:
+                        name_category = categories[j]
+                    blocks = element.split(self.sep_desig)
+                    for k, block in enumerate(blocks, start=0):
+                        if k == 0:
+                            chunks = block.split(self.sep_spec)
 
-    def decompose_element(self, element):
-        raw_element = []
-        keys = element.split(self.sep_spec)
-        for key in keys:
-            raw_element.append(key.split("-")[0])
-        if "-" in element:
-            raw_element.append(element.split("-")[1])
-        return raw_element
+                            for m, chunk in enumerate(chunks, start=0):
+                                if m == 0:
+                                    if translate and chunk is not "":
+                                        if i in [0, 2]:
+                                            budo_cat = chunk
+                                            dict_key[name_category] = self.dict_cpc[budo_cat][
+                                                "name_"+language]
+                                        elif i == 1:
+                                            budo_cat = self.dict_cat_budo[name_category]
+                                            budo_ca = chunk
+                                            dict_key[name_category] = self.dict_cpc[budo_cat][chunk][
+                                                    "name_"+language]
+                                    else:
+                                        dict_key[name_category] = chunk
+                                elif m == 1:
+                                    if translate and chunk is not "":
+                                        if i in [0, 2]:
+                                            dict_key[name_category + " specification " + str(m)] = self.dict_cpc[
+                                                budo_cat][chunk]["name_" + language]
+                                        elif i == 1:
+                                            dict_key[name_category + " specification " + str(m)] = self.dict_cpc[
+                                                budo_cat][budo_ca][chunk]["name_" + language]
+                                    else:
+                                        dict_key[name_category + " specification " + str(m)] = chunk
+                                else:
+                                    if translate and chunk is not "":
+                                        # name_category_orig = categories_dict_orig[name_category + " specification " + str(m)]
+                                        budo_spec = self.dict_cat_budo[name_category + " specification " + str(m)]
+                                        dict_key[name_category + " specification " + str(m)] = self.dict_cpc[
+                                            budo_spec]["name_" + language]
+                                    else:
+                                        dict_key[name_category + " specification " + str(m)] = chunk
 
-    def get_translation_outside_parts(self, budo_part):
-        outside_list = []
-        # outside_elements = budo_part.split(self.sep_cat)
-        for element in budo_part:
-            translation = self.get_translation_outside_elements(element)
-            outside_list.append(translation)
-        return outside_list
-
-    def get_translation_outside_elements(self, budo_element):
-        if "-" in budo_element:
-            chunks = budo_element.split("-")
-            designation = chunks[1]
-        else:
-            designation = ""
-        name = self.abb[self.abb['budo'] == chunks[0]][self.c_abb].to_string(
-            index=False, header=False)
-        return [name, designation]
-
-    def get_translation_category(self, budo_element, category):
-        if self.check_abbreviation(budo_element):
-            budo_temp = self.abb[self.abb['budo'] == budo_element][self.c_abb].values.tolist()
-            budo_translation = self.ca[(self.ca[self.c_abb].isin(budo_temp))]
-            budo_translation = budo_translation[budo_translation[
-                                                    self.c_cat] == self.categories_db[category]][self.c_abb].to_string(
-                index=False,
-                header=False)
-            if "Series([], )" in budo_translation:
-                budo_translation = ""
-            # print(budo_translation)
-        else:
-            warnings.warn('"' + budo_element + '" is not a Budo abbreviation', RuntimeWarning)
-            budo_translation = "not available"
-
-        return budo_translation
-
-    def get_translation_children(self, budo_parent, budo_children):
-        if self.check_abbreviation(budo_parent) and self.check_abbreviation(budo_children):
-            budo_parent_temp = self.abb[self.abb['budo'] == budo_parent][self.c_abb].values.tolist()
-            budo_children_temp = self.abb[self.abb['budo'] == budo_children][self.c_abb].values.tolist()
-            # budo_parent_children_translation
-
-            df_par = self.pc[(self.pc[self.c_par].isin(budo_parent_temp))]
-            df_chi = self.pc[(self.pc[self.c_chi].isin(budo_children_temp))]
-
-            budo_pct = df_par.merge(df_chi, on=[self.c_par, self.c_chi])
-
-            parent = budo_pct[self.c_par].to_string(index=False, header=False)
-            children = budo_pct[self.c_chi].to_string(index=False, header=False)
-        else:
-            warnings.warn('"' + budo_parent + '" and "' + budo_children + '" is not a valid relation',
-                          RuntimeWarning)
-            parent = "not available"
-            children = "not available"
-
-        return parent, children
-
-    def check_abbreviation(self, abbreviation):
-        return not self.abb[self.abb['budo'] == abbreviation].empty
+                        elif k == 1:
+                            dict_key[name_category + " designation"] = block
+            dict_keys[key] = dict_key
+        return dict_keys
 
 
-if __name__ == "__main__":
-    budo_key = "B-4120#BOI+COND-1_SEN+T-B01__W+H+FLO+IN_MEA+T_BO#U-DEGC"
-    budo = Budo()
+if __name__ == '__main__':
+    import pprint
 
-    # budo_parent, budo_children = budo.get_translation_children("BOI", "COND")
-    # print(budo_parent)
-    # print(budo_children)
+    bt = Budo(language="German", translate=True)
+    # dict_all0 = bt.get_index()
+    pp = pprint.PrettyPrinter(depth=5)
+    # pp.pprint(bt.dict_cpc)
+    budo_keys = [
+        "AE-abc_FL.CC+ROO-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_WST-01_SEN+P.ATM-01_WS+H+OUT+MID-1_MEA+T+SP-abc_AI§U+.C_B+GREEN_FL+BASE.1_DS-01_CG-01",
+        "AE-abc_FL.CC+BASE-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_CH+ADS-01_SEN+T-01_WS+H++MID-1_MEA++SP-abc_AI§U+T_B+GREEN_FL+BASE.1_DS-01_CG-01",
+        "B+RESP-4120_MG§CHP-01_SEN+T-01__WS+H+IN_MEA+T_§U+.C"]
+    # dict_cc = bt.split(budo_keys)
 
-    # budo_split = budo.decompose_budo(budo_key=budo_key)
-    #
-    # print(budo_split)
-    #
-    # budo_key = "B-4120#BOI+COND-1_SEN+T-B01__W+H+FLO+IN_MEA+T_BO"
-    # budo_split = budo.decompose_budo(budo_key=budo_key)
-    # print(budo_split)
-    #
-    # budo_key = "BOI+COND-1_SEN+T-B01__W+H+FLO+IN_MEA+T_BO"
-    # budo_split = budo.decompose_budo(budo_key=budo_key)
-    # print(budo_split)
+    # print(dict_cc)
 
-    budo_list1 = budo.get_translation(budo_keys=budo_key)
-    print(budo_list1)
-
-    # list1 = budo.get_translation_outside("B-4120")
-    # print(list1)
-
-    # list1 = budo.decompose_element("W+H+FLO+IN")
-    # print(list1)
-
-    # print(budo.check_abbreviation("BOI"))
-
-    # print(budo.get_translation("TESTITEST", "System"))
+    import timeit, functools
+    t = timeit.Timer(functools.partial(bt.split, budo_keys))
+    print(t.timeit(10))
+    print(t.timeit(100))
+    print(t.timeit(1000))
+    print(t.timeit(10000))
