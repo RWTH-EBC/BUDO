@@ -173,12 +173,16 @@ if __name__ == '__main__':
         "AE-abc_FL.CC+ROO-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_WST-01_SEN+P.ATM-01_WS+H+OUT+MID-1_MEA+T+SP-abc_AI§U+.C_B+GREEN_FL+BASE.1_DS-01_CG-01",
         "AE-abc_FL.CC+BASE-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_CH+ADS-01_SEN+T-01_WS+H++MID-1_MEA++SP-abc_AI§U+T_B+GREEN_FL+BASE.1_DS-01_CG-01",
         "B+RESP-4120_MG§CHP-01_SEN+T-01__WS+H+IN_MEA+T_§U+.C"]
-    # dict_cc = bt.split(budo_keys)
 
+
+
+
+    # dict_cc = bt.split(budo_keys)
+    #
     # print(dict_cc)
 
     import timeit, functools
-    t = timeit.Timer(functools.partial(bt.split, budo_keys))
+    t = timeit.Timer(functools.partial(bt.split, budo_keys, True))
     print(t.timeit(10))
     print(t.timeit(100))
     print(t.timeit(1000))
