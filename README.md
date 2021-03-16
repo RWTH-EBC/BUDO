@@ -31,7 +31,7 @@ This first part is separated from the standardized part of the data point key by
 
 By selecting optional designations or numbering, the designations used before can be integrated. This means that the individual data points can still be recognized on existing plans. These manual specifications can also be used for the data visualization of customers.
 
-At the end, five more free categories can be added (e.g. unit). These are separated from the rest of the standard by a ```§``` at the beginning.
+At the end, three more free categories can be added (e.g. unit). These are separated from the rest of the standard by a ```§``` at the beginning.
 
 You can access the Excel BUDO Creator via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table). A Google Spreadsheet version is for testing available under the following [link](https://docs.google.com/spreadsheets/d/1irBxSYUZWAnswR2uyZlXsgReJTcwf_vETIxmwAzKYMQ/edit#gid=0). If you need a personal version of the Google Spreadsheet version, please contact the [BUDO Schema Team](mailto:info@budo-schema.de). We will provide the spreadsheet very soon.
 
@@ -40,8 +40,6 @@ You can access the Excel BUDO Creator via the following [link](https://github.co
 The vocabularies for BUDO are documented in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/Documentation-BUDO-vocabulary). As the free categories allow to fine granular describe the integration into the operation, we describe in the following [article](https://github.com/RWTH-EBC/BUDO/wiki/Documentation-free-categories) which free categories and which specifications you can use here. The german documentation is mapped [here](https://github.com/RWTH-EBC/BUDO/wiki/Dokumentation-BUDO-Vokabular) and [here](https://github.com/RWTH-EBC/BUDO/wiki/Dokumentation-freie-Kategorien).
 
 # Usage of BUDO Creator
-
-The installation instructions can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/Installation-BUDO-creator).
 
 An instruction how to use the BUDO Creator can be found [here](https://github.com/RWTH-EBC/BUDO/wiki/Usage-BUDO-creator).
 

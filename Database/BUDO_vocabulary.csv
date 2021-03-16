@@ -3577,6 +3577,7 @@ Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 8","mezzanine
 Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 9","mezzanine 9",MEZ.9
 Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 10","mezzanine 10",MEZ.10
 Signaltyp,"signal type",ST,Rückmeldung,feedback,FB,Fernzugriff,"remote access",REM.ACCS
+System,system,SYS,Sensor,sensor,SEN,Multisensor,"multi sensor",MUL
 System,system,SYS,Betonkerntemperierung,"concrete core activation",CCA,NULL,NULL,NULL
 System,system,SYS,"Blockheizkraftwerk (BHKW)","combined heat and power",CHP,NULL,NULL,NULL
 System,system,SYS,Fernkälte,"district cooling",C.DISTR,NULL,NULL,NULL
