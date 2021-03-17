@@ -59,7 +59,6 @@ System,system,SYS,Sensor,sensor,SEN,Volumenstrom,"volume flow",VF
 System,system,SYS,Sensor,sensor,SEN,Wärmemenge,"heating energy",EN.H
 System,system,SYS,Sensor,sensor,SEN,Wind,wind,WIND
 System,system,SYS,Schalter,switch,SWI,"Not Aus","emergency off",EMR
-Medium,medium,MED,Wasser,water,WS,Ab,extract,ETA
 Medium,medium,MED,Wasser,water,WS,Heiz/Heiß,heat/hot,H
 Medium,medium,MED,Wasser,water,WS,Kälte,chill,CH
 Medium,medium,MED,Wasser,water,WS,Kühl,cool,C
@@ -68,18 +67,16 @@ Medium,medium,MED,Wasser,water,WS,Primär,primary,PRIM
 Medium,medium,MED,Wasser,water,WS,Sekundär,secondary,SEC
 Medium,medium,MED,Wasser,water,WS,"Trinkwasser, kalt","potable water, cold",PWC
 Medium,medium,MED,Wasser,water,WS,"Trinkwasser, warm","potable water, warm",PWH
-Medium,medium,MED,Wasser,water,WS,Zu,supply,SUP
-Medium,medium,MED,Wasser,water,WS,"Zu und Ab","supply and extract",SUP.ETA
-Medium,medium,MED,Luft,air,AIR,Ab,extract,ETA
+Medium,medium,MED,Luft,air,AIR,Abluft,"extract air",ETA
 Medium,medium,MED,Luft,air,AIR,Fort,exhaust,EHA
 Medium,medium,MED,Luft,air,AIR,Frisch/Außen,fresh/outside,ODA
 Medium,medium,MED,Luft,air,AIR,Mischluft,"mixed air",MIA
 Medium,medium,MED,Luft,air,AIR,Primär,primary,PRIM
 Medium,medium,MED,Luft,air,AIR,Raum/Innen,room/inside,IDA
 Medium,medium,MED,Luft,air,AIR,Sekundär,secondary,SEC
-Medium,medium,MED,Luft,air,AIR,Um,recirculation,RCA
-Medium,medium,MED,Luft,air,AIR,Zu,supply,SUP
-Medium,medium,MED,Luft,air,AIR,"Zu und Ab","supply and extract",SUP.ETA
+Medium,medium,MED,Luft,air,AIR,Umluft,"recirculation air",RCA
+Medium,medium,MED,Luft,air,AIR,Zuluft,"supply air",SUP
+Medium,medium,MED,Luft,air,AIR,"Zu- und Abluft","supply and extract air",SUP.ETA
 System,system,SYS,Ventilator,fan,FAN,Frequenzumformer,"frequency converter",FC
 Medium,medium,MED,Ventilator,fan,FAN,Frequenzumformer,"frequency converter",FC
 Signaltyp,"signal type",ST,Messwert,"measured value",MEA,"Absolute Feuchte","absolute humidity",HUM.ABS
@@ -2484,9 +2481,6 @@ Signaltyp,"signal type",ST,Störung,malfunction,MALF,Ladung,load,LOA
 Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Ladung,load,LOA
 Signaltyp,"signal type",ST,Stellbefehl,"positioning command",COM.POS,Ladung,load,LOA
 System,system,SYS,Sensor,sensor,SEN,Ladung,load,LOA
-System,system,SYS,Erzeugung,generation,GEN,Wärme,heat,H
-System,system,SYS,Erzeugung,generation,GEN,Elektrisch,electrical,EL
-System,system,SYS,Erzeugung,generation,GEN,Kälte,chill,CH
 System,system,SYS,"Abwasser-, Wasser-, Gasanlage","sewage, water, gas plant",SWG,Wasserbecken,"water basin",BASI
 Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Leistung,power,POW
 Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Zeitprogramm,"time program",PRG.TIM
@@ -2496,9 +2490,8 @@ System,system,SYS,"Kommunikations-, sicherheits- und informationstechnische Anla
 System,system,SYS,Schalter,switch,SWI,"Umschaltung Heizen/Kühlen","heating/cooling switchover",H.C
 Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,"Umschaltung Heizen/Kühlen","heating/cooling switchover",H.C
 Medium,medium,MED,Wasser,water,WS,Speisewasser,"feed water",FE
-Medium,medium,MED,Wasser,water,WS,Zulauf,influx,INFX
+Medium,medium,MED,Wasser,water,WS,Zulauf,influx,IFX
 Medium,medium,MED,Wasser,water,WS,Ablauf,"water drainage",DRAI
-Medium,medium,MED,Luft,air,AIR,Zuluft,"supply air",SUP
 Medium,medium,MED,Luft,air,AIR,Abluft,"exhaust air",EXH
 System,system,SYS,Medienversorgung,"media supply",SUP,Brennstoffversorgung,"fuel supply",FUEL.SUP
 Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Brennstoffversorgung,"fuel supply",FUEL.SUP
@@ -2640,14 +2633,9 @@ Signaltyp,"signal type",ST,Alarm,alarm,ALA,Taster,button,BT
 System,system,SYS,Behälter,tank,TNK,Pumpensumpf,"pump sump",PU.SMP
 System,system,SYS,Behälter,tank,TNK,Wasserbehälter,"water tank",WS.TANK
 Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Fernquittierung,"remote acknowledgement",REM.ACK
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Stopp,stop,STOP
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Stopp,stop,STOP
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Stopp,stop,STOP
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,Stopp,stop,STOP
 Raum,room,R,"Sonstige Nutzung","other use",OTH,"Duschen und Umkleiden","shower and locker room",WASH.LOCK
 System,system,SYS,Raumautomation,"room automation",RA,Datenschnittstelleneinheit,"data interface unit",DIU
 Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,Datenschnittstelleneinheit,"data interface unit",DIU
-Signaltyp,"signal type",ST,"PID Regler","PID control",PID,Reglerausgang,"controller output",CTRL.OUT
 Signaltyp,"signal type",ST,Regelung,control,CTRL,Reglerausgang,"controller output",CTRL.OUT
 Signaltyp,"signal type",ST,Regelung,control,CTRL,Reglereingang,"controller input",CTRL.IN
 System,system,SYS,Schalter,switch,SWI,eingeschaltet,on,ON
@@ -2655,9 +2643,7 @@ System,system,SYS,Schalter,switch,SWI,ausgeschaltet,off,OFF
 Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Elektrisch,electrical,EL
 Signaltyp,"signal type",ST,Störung,malfunction,MALF,Elektrisch,electrical,EL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Elektrisch,electrical,EL
-System,system,SYS,Vorerhitzer,preheater,H.PR,Wassererhitzer,"water heater",WS
 System,system,SYS,Vorerhitzer,preheater,H.PR,Wasserlufterhitzer,"water air heater",AIR.WS
-System,system,SYS,Nacherhitzer,reheater,H.RE,Wassererhitzer,"water heater",WS
 System,system,SYS,Nacherhitzer,reheater,H.RE,Wasserlufterhitzer,"water air heater",AIR.WS
 System,system,SYS,"Nutzungsspezifische und verfahrenstechnische Anlage","usage-specific and process-engineering plant",USAS,Exhaustor,exhaustor,EXH
 Signaltyp,"signal type",ST,Alarm,alarm,ALA,Haupt,main,MN
@@ -2686,7 +2672,6 @@ Signaltyp,"signal type",ST,Alarm,alarm,ALA,Schnittstelle,interface,IFC
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Schnittstelle,interface,IFC
 Gebäude,building,B,"Gebäude für Bildung und Forschung","building for education and research",EDU.RESEA,Grundschule,"elementary school",ELEM.SCHO
 Gebäude,building,B,"Gebäude für Bildung und Forschung","building for education and research",EDU.RESEA,"Weiterführende Schule","high school",HIG.SCHO
-Gebäude,building,B,"Gebäude für Bildung und Forschung","building for education and research",EDU.RESEA,Schule,school,SCHO
 Medium,medium,MED,Spannungsversorgung,"voltage supply",V.SUP,"220 V","220 V",V.220
 Signaltyp,"signal type",ST,Anzeige,display,DIS,Taster,button,BT
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Anzeige,display,DIS,Taster,button,BT
@@ -2840,50 +2825,22 @@ Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kü
 Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, Hysterese","cooling controller, hysteresis",C.HYS
 Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, external","cooling controller, extern",C.EXT
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Kaskade","ventilation controller, cascade",VENT.CASC
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Kaskade","ventilation controller, cascade",VENT.CASC
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Kaskade","ventilation controller, cascade",VENT.CASC
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, modulierend","ventilation controller, modulating",VENT.MODU
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, modulierend","ventilation controller, modulating",VENT.MODU
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, modulierend","ventilation controller, modulating",VENT.MODU
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 1-stufig","ventilation controller, 1-step",VENT.1.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 1-stufig","ventilation controller, 1-step",VENT.1.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 1-stufig","ventilation controller, 1-step",VENT.1.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 2-stufig","ventilation controller, 2-step",VENT.2.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 2-stufig","ventilation controller, 2-step",VENT.2.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 2-stufig","ventilation controller, 2-step",VENT.2.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 3-stufig","ventilation controller, 3-step",VENT.3.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 3-stufig","ventilation controller, 3-step",VENT.3.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 3-stufig","ventilation controller, 3-step",VENT.3.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 4-stufig","ventilation controller, 4-step",VENT.4.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 4-stufig","ventilation controller, 4-step",VENT.4.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 4-stufig","ventilation controller, 4-step",VENT.4.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 5-stufig","ventilation controller, 5-step",VENT.5.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 5-stufig","ventilation controller, 5-step",VENT.5.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 5-stufig","ventilation controller, 5-step",VENT.5.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 6-stufig","ventilation controller, 6-step",VENT.6.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 6-stufig","ventilation controller, 6-step",VENT.6.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 6-stufig","ventilation controller, 6-step",VENT.6.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 7-stufig","ventilation controller, 7-step",VENT.7.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 7-stufig","ventilation controller, 7-step",VENT.7.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 7-stufig","ventilation controller, 7-step",VENT.7.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 8-stufig","ventilation controller, 8-step",VENT.8.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 8-stufig","ventilation controller, 8-step",VENT.8.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 8-stufig","ventilation controller, 8-step",VENT.8.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stetig","ventilation controller, continuous",VENT.CONT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stetig","ventilation controller, continuous",VENT.CONT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stetig","ventilation controller, continuous",VENT.CONT
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Hysterese","ventilation controller, hysteresis",VENT.HYS
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Hysterese","ventilation controller, hysteresis",VENT.HYS
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Hysterese","ventilation controller, hysteresis",VENT.HYS
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, external","ventilation controller, extern",VENT.EXT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, external","ventilation controller, extern",VENT.EXT
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, external","ventilation controller, extern",VENT.EXT
 Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, stufig","equipment controller, step",EQ.STEP
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stufig","ventilation controller, step",VENT.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stufig","ventilation controller, step",VENT.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stufig","ventilation controller, step",VENT.STEP
 Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, stufig","temperature and humidity controller, step",T.HUM.STEP
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, stufig","frost protection controller, step",FROS.CASC
+Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, stufig","frost protection controller, step",FROS.STEP
 Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, stufig","pressure controller, step",P.STEP
 Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, stufig","temperature controller, step",T.STEP
 Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, stufig","fan controller, step",FAN.STEP
@@ -2891,8 +2848,6 @@ Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",
 Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, stufig","heating controller, step",H.STEP
 Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, stufig","cooling controller, step",C.STEP
 Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, Energieeffizienz","equipment controller, energy efficiency",EQ.EN.EF
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Energieeffizienz","ventilation controller, energy efficiency",VENT.EN.EF
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Energieeffizienz","ventilation controller, energy efficiency",VENT.EN.EF
 Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Energieeffizienz","ventilation controller, energy efficiency",VENT.EN.EF
 Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, Energieeffizienz","temperature and humidity controller, energy efficiency",T.HUM.EN.EF
 Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, Energieeffizienz","frost protection controller, energy efficiency",FROS.EN.EF
@@ -2933,7 +2888,7 @@ Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenre
 Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, stufig","pump controller, step",PU.STEP
 Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, Energieeffizienz","pump controller, energy efficiency",PU.EN.EF
 Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,"Luftqualitätsregler, Energieeffizienz","air quality controller, energy efficiency",AQ.EN.EF
-Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, Energieeffizienz","humidity controller, energy efficiency",HUM.HYS
+Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, Energieeffizienz","humidity controller, energy efficiency",HUM.EN.EF
 Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, Kaskade","hot water controller, cascade",DH.CASC
 Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, modulierend","hot water controller, modulating",DH.MODU
 Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 1-stufig","hot water controller, 1-step",DH.1.STEP
@@ -2964,9 +2919,6 @@ Signaltyp,"signal type",ST,Anzeige,display,DIS,Tableau,tableau,TAB
 System,system,SYS,Anzeige,display,DIS,Tableau,tableau,TAB
 Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,offen/öffnen,open,OP
 Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,geschlossen/schließen,closed/close,CL
-Medium,medium,MED,Luft,air,AIR,Abluft,"extract air",ETA
-Medium,medium,MED,Luft,air,AIR,Umluft,"recirculation air",RCA
-Medium,medium,MED,Luft,air,AIR,"Zu- und Abluft","supply and extract air",SUP.ETA
 Planart,"plan type",PL,"Dokumentationsbeschreibende Dokumente","Documentation describing documents",A2A,"Verwaltungstechnische Dokumente","Administrative documents",A3AA
 Planart,"plan type",PL,"Dokumentationsbeschreibende Dokumente","Documentation describing documents",A2A,"Listen (Dokumente betreffend)","Lists (regarding documents)",A3AB
 Planart,"plan type",PL,"Dokumentationsbeschreibende Dokumente","Documentation describing documents",A2A,"Erläuternde Dokumente (Dokumente betreffend)","Explanatory documents (regarding documents)",A3AC
@@ -3054,530 +3006,7 @@ Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 8","mezzanine
 Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 9","mezzanine 9",MEZ.9
 Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 10","mezzanine 10",MEZ.10
 Signaltyp,"signal type",ST,Rückmeldung,feedback,FB,Fernzugriff,"remote access",REM.ACCS
-System,system,SYS,Kühler,cooler,C,Gaskühler,"gas cooler",C.GAS
-System,system,SYS,Kühler,cooler,C,Luftkühler,"air cooler",AIR
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Feuchtigkeit,humidity,HUM
-System,system,SYS,Schalter,switch,SWI,"thermische Auslösung","thermal triggering",THET
-System,system,SYS,Wärmeübertrager,"heat exchanger",HX,Plattenwärmeübertrager,"plate heat exchanger",PLT
-System,system,SYS,Wärmerückgewinnungssystem,"heat recovery system",HRCS,Kreislaufverbundsystem,"circuit compound system",CICS
-System,system,SYS,Frequenzumrichter,"variable frequency drive",VFD,Bypass,bypass,BYP
-Signaltyp,"signal type",ST,Regelung,control,CTRL,"modulierende Ansteuerung","modulating control",MODU
-System,system,SYS,Befeuchter,humidifier,HUM,Luftwäscher,"air washer",AIR.WASH
-System,system,SYS,Befeuchter,humidifier,HUM,Kaltdampfbefeuchter,"cold steam humidifier",STE.C
-System,system,SYS,Befeuchter,humidifier,HUM,Elektrodampfbefeuchter,"electric steam humidifier",STE.EL
-System,system,SYS,Befeuchter,humidifier,HUM,Ultraschallbefeuchter,"ultrasonic humidifier",ULT
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Lüftung,ventilation,VENT
-System,system,SYS,Raumautomation,"room automation",RA,Raumbedarfsregelung,"room demand controller",DEM
-Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,Raumbedarfsregelung,"room demand controller",DEM
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,"Maximum Economy","maximum economy",ECO.MAX
-System,system,SYS,Verteilsystem,"distribution system",DISTS,Wärme,heat,H
-System,system,SYS,Verteiler,distributor,DIST,Wärme,heat,H
-System,system,SYS,Unterverteilsystem,"sub-distribution system",DISTS.SUB,Wärme,heat,H
-System,system,SYS,Unterverteiler,sub-distributor,DIST.SUB,Wärme,heat,H
-System,system,SYS,Kreis,circle,CIR,Misch,mix,MIX
-System,system,SYS,Kreislaufverbundsystem,"circulatory system",HRC.CRC,Misch,mix,MIX
-Signaltyp,"signal type",ST,"Berechneter Wert","calculated value",CALCV,Ladung,load,LOA
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Ladung,load,LOA
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Ladung,load,LOA
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Ladung,load,LOA
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Ladung,load,LOA
-Signaltyp,"signal type",ST,Stellbefehl,"positioning command",COM.POS,Ladung,load,LOA
-System,system,SYS,Sensor,sensor,SEN,Ladung,load,LOA
-System,system,SYS,Erzeugung,generation,GEN,Wärme,heat,H
-System,system,SYS,Erzeugung,generation,GEN,Elektrisch,electrical,EL
-System,system,SYS,Erzeugung,generation,GEN,Kälte,chill,CH
-System,system,SYS,"Abwasser-, Wasser-, Gasanlage","sewage, water, gas plant",SWG,Wasserbecken,"water basin",BASI
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Leistung,power,POW
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Zeitprogramm,"time program",PRG.TIM
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Kommunikation,communication,COMUC
-System,system,SYS,Box,box,BOX,"Lüfterbetriebene Box","fan powered box",FAN
-System,system,SYS,"Kommunikations-, sicherheits- und informationstechnische Anlage","communication, safety and information technology system",CSI,Trunk,trunk,TRNK
-System,system,SYS,Schalter,switch,SWI,"Umschaltung Heizen/Kühlen","heating/cooling switchover",H.C
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,"Umschaltung Heizen/Kühlen","heating/cooling switchover",H.C
-Medium,medium,MED,Wasser,water,WS,Speisewasser,"feed water",FE
-Medium,medium,MED,Wasser,water,WS,Zulauf,influx,INFX
-Medium,medium,MED,Wasser,water,WS,Ablauf,"water drainage",DRAI
-Medium,medium,MED,Luft,air,AIR,Zuluft,"supply air",SUP
-Medium,medium,MED,Luft,air,AIR,Abluft,"exhaust air",EXH
-System,system,SYS,Medienversorgung,"media supply",SUP,Brennstoffversorgung,"fuel supply",FUEL.SUP
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Brennstoffversorgung,"fuel supply",FUEL.SUP
-System,system,SYS,Medienversorgung,"media supply",SUP,Kaltwasserversorgung,"cold water supply",WS.C
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Kaltwasserversorgung,"cold water supply",WS.C
-System,system,SYS,Medienversorgung,"media supply",SUP,Wasserversorgung,"water supply",WS
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Wasserversorgung,"water supply",WS
-System,system,SYS,Medienversorgung,"media supply",SUP,Warmwasserversorgung,"hot water supply",WS.DH
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Warmwasserversorgung,"hot water supply",WS.DH
-System,system,SYS,Medienversorgung,"media supply",SUP,"Elektrische Versorgung","electrical supply",EL
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,"Elektrische Versorgung","electrical supply",EL
-System,system,SYS,Medienversorgung,"media supply",SUP,Luftversorgung,"air supply",AIR
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Luftversorgung,"air supply",AIR
-System,system,SYS,Medienversorgung,"media supply",SUP,"Warm- und Kaltwasserversorgung","hot and cold water supply",WS.DH.C
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,"Warm- und Kaltwasserversorgung","hot and cold water supply",WS.DH.C
-System,system,SYS,Medienversorgung,"media supply",SUP,Druckluftversorgung,"compressed air supply",COMP
-Gewerk,"maintenance group",MG,Medienversorgung,"media supply",SUP,Druckluftversorgung,"compressed air supply",COMP
-System,system,SYS,Wächter,monitor,MON,Zeitprogramm,"time program",PRG.TIM
-Steuerungsgerät,"control device",CD,Wächter,monitor,MON,Zeitprogramm,"time program",PRG.TIM
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Start-/Stopp-Steuerung,"start/stop control",STRT.STOP
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,Kühlfall,"cooling mode",MOD.C
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,Heizfall,"heating mode",MOD.H
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Kühlfall,"cooling mode",MOD.C
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Heizfall,"heating mode",MOD.H
-System,system,SYS,Kreis,circle,CIR,Heiz/Heiß,heat/hot,H
-System,system,SYS,Kreislaufverbundsystem,"circulatory system",HRC.CRC,Heiz/Heiß,heat/hot,H
-System,system,SYS,Kreis,circle,CIR,Kühl,cool,C
-System,system,SYS,Kreislaufverbundsystem,"circulatory system",HRC.CRC,Kühl,cool,C
-Medium,medium,MED,Wasser,water,WS,Misch,mix,MIX
-System,system,SYS,Wächter,monitor,MON,Frequenz,frequency,FQ
-Steuerungsgerät,"control device",CD,Wächter,monitor,MON,Frequenz,frequency,FQ
-System,system,SYS,Pumpe,pump,PU,Zwillingspumpe,"twin pump",TWI
-Gewerk,"maintenance group",MG,Pumpe,pump,PU,Zwillingspumpe,"twin pump",TWI
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Dreipunktregelung,"three-point control",3PC
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,"Kohlenstoffmonoxid (CO)","carbon monoxide (CO)",CO
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,"Kohlenstoffmonoxid (CO)","carbon monoxide (CO)",CO
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,"Kohlenstoffdioxid (CO2)","carbon dioxide (CO2)",CO2
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,"Kohlenstoffdioxid (CO2)","carbon dioxide (CO2)",CO2
-System,system,SYS,Schalter,switch,SWI,Stufenschalter,"step switch",STEP
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Energieeffizienz,"energy efficiency",EN.EF
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Zweipunktregelung,"two-point control",2PC
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Einschaltvorgänge,"switch-on operations",OPR.ON
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Einschaltdauer,"duty cycle",DUT
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Stufe,level,LEV
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Stufe,level,LEV
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Stufe,level,LEV
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Stufe,level,LEV
-Signaltyp,"signal type",ST,Stellbefehl,"positioning command",COM.POS,Stufe,level,LEV
-System,system,SYS,Verteilsystem,"distribution system",DISTS,"Wärme und Kälte",heating/cooling,HC
-System,system,SYS,Verteiler,distributor,DIST,"Wärme und Kälte",heating/cooling,HC
-System,system,SYS,Unterverteilsystem,"sub-distribution system",DISTS.SUB,"Wärme und Kälte",heating/cooling,HC
-System,system,SYS,Unterverteiler,sub-distributor,DIST.SUB,"Wärme und Kälte",heating/cooling,HC
-Signaltyp,"signal type",ST,"Überwachter Wert","monitored value",MONV,Position,position,POS
-Signaltyp,"signal type",ST,"Überwachter Wert","monitored value",MONV,Druck,pressure,P
-Signaltyp,"signal type",ST,"Überwachter Wert","monitored value",MONV,Temperatur,temperature,T
-Signaltyp,"signal type",ST,"Überwachter Wert","monitored value",MONV,Feuchtigkeit,humidity,HUM
-Signaltyp,"signal type",ST,Anlagensignal,"equipment signal",EQ,"Kühlkennlinie Eckpunkt","cooling characteristic curve corner point",CCC.CP
-Signaltyp,"signal type",ST,Anlagensignal,"equipment signal",EQ,"Kühlkennlinie Exponent","cooling characteristic curve exponent",CCC.EXP
-Signaltyp,"signal type",ST,Anlagensignal,"equipment signal",EQ,"Kühlkennlinie Parallelverschiebung","cooling characteristic curve parallel shift",CCC.PSHI
-Signaltyp,"signal type",ST,Anlagensignal,"equipment signal",EQ,"Kühlkennlinie Steilheit","cooling characteristic curve steepness",CCC.STPN
-Signaltyp,"signal type",ST,Anlagensignal,"equipment signal",EQ,Kühlkennlinie,"cooling characteristic curve",CCC
-Signaltyp,"signal type",ST,Anlagensignal,"equipment signal",EQ,Heizkennlinie,"heating characteristic curve",HCC
-System,system,SYS,Bedarf,demand,DEM,Kühlung,cooling,C
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Kühlung,cooling,C
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Kühlung,cooling,C
-System,system,SYS,Bedarf,demand,DEM,Elektrisch,electrical,EL
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Elektrisch,electrical,EL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Elektrisch,electrical,EL
-System,system,SYS,Bedarf,demand,DEM,Gas,gas,GAS
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Gas,gas,GAS
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Gas,gas,GAS
-System,system,SYS,Bedarf,demand,DEM,Heizung,heating,H
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Heizung,heating,H
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Heizung,heating,H
-System,system,SYS,Bedarf,demand,DEM,Dampf,steam,STE
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Dampf,steam,STE
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Dampf,steam,STE
-System,system,SYS,Bedarf,demand,DEM,Wasser,water,WS
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Wasser,water,WS
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Wasser,water,WS
-System,system,SYS,Bedarf,demand,DEM,"Wärme und Kälte",heating/cooling,HC
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,"Wärme und Kälte",heating/cooling,HC
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,"Wärme und Kälte",heating/cooling,HC
-System,system,SYS,Bedarf,demand,DEM,Druckluft,"compressed air",COMP
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Druckluft,"compressed air",COMP
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Druckluft,"compressed air",COMP
-System,system,SYS,Bedarf,demand,DEM,Heizöl,"fuel oil",FUEL
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Heizöl,"fuel oil",FUEL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Heizöl,"fuel oil",FUEL
-System,system,SYS,Unterverteiler,sub-distributor,DIST.SUB,Kühlung,cooling,C
-System,system,SYS,Unterverteilsystem,"sub-distribution system",DISTS.SUB,Kühlung,cooling,C
-System,system,SYS,Prozessanlage,"process system",PRO,Kühlung,cooling,C
-System,system,SYS,Verteiler,distributor,DIST,Kühlung,cooling,C
-System,system,SYS,Verteilsystem,"distribution system",DISTS,Kühlung,cooling,C
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,starten,start,STRT
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,starten,start,STRT
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,starten,start,STRT
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,starten,start,STRT
-System,system,SYS,Schalter,switch,SWI,Ferien,holiday,HOLID1
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,Ferien,holiday,HOLID1
-System,system,SYS,Bedarf,demand,DEM,Befeuchten,humidify,HUM
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,Befeuchten,humidify,HUM
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Bedarf,demand,DEM,Befeuchten,humidify,HUM
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,"nächste Betriebsart","next operating mode",OPR.MOD.NXT
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Folgeschaltung,"sequence control",CTRL.SEQ
-Signaltyp,"signal type",ST,"Überwachter Wert","monitored value",MONV,Windgeschwindigkeit,"wind speed",WIND.SPE
-System,system,SYS,Wächter,monitor,MON,Druckdifferenz,"pressure difference",P.DIF
-Steuerungsgerät,"control device",CD,Wächter,monitor,MON,Druckdifferenz,"pressure difference",P.DIF
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Brandschutz,"fire safety",FIRE
-Signaltyp,"signal type",ST,Rückmeldung,feedback,FB,Betriebsart,"operating mode",OPR.MOD
-System,system,SYS,Raumautomation,"room automation",RA,Zeitschaltuhr,timer,TIMR
-Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,Zeitschaltuhr,timer,TIMR
-System,system,SYS,Wächter,monitor,MON,"Thermoelektrische Überlast","thermoelectric overload",THEL.OVL
-Steuerungsgerät,"control device",CD,Wächter,monitor,MON,"Thermoelektrische Überlast","thermoelectric overload",THEL.OVL
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,"Thermoelektrische Überlast","thermoelectric overload",THEL.OVL
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,Druck,pressure,P
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Druck,pressure,P
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Sicherungsausfall,"fuse outage",FUSE
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Sicherungsausfall,"fuse outage",FUSE
-System,system,SYS,Sensor,sensor,SEN,Multisensor,multisensor,MUL
-Signaltyp,"signal type",ST,"Berechneter Wert","calculated value",CALCV,Geschwindigkeit,speed,SPE
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Geschwindigkeit,speed,SPE
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Geschwindigkeit,speed,SPE
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Geschwindigkeit,speed,SPE
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Geschwindigkeit,speed,SPE
-Signaltyp,"signal type",ST,Stellbefehl,"positioning command",COM.POS,Geschwindigkeit,speed,SPE
-System,system,SYS,Sensor,sensor,SEN,Geschwindigkeit,speed,SPE
-System,system,SYS,Schalter,switch,SWI,"Umschaltung Sommer/Winter","summer/winter switchover",SU.WI
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,"Umschaltung Sommer/Winter","summer/winter switchover",SU.WI
-System,system,SYS,Schalter,switch,SWI,"Ausgleich Sommer/Winter","summer/winter compensation",SU.WI.CMPS
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,"Ausgleich Sommer/Winter","summer/winter compensation",SU.WI.CMPS
-Signaltyp,"signal type",ST,"Berechneter Wert","calculated value",CALCV,Bodenfeuchte,"soil moisture",SMST
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Bodenfeuchte,"soil moisture",SMST
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Bodenfeuchte,"soil moisture",SMST
-System,system,SYS,Sensor,sensor,SEN,Bodenfeuchte,"soil moisture",SMST
-Signaltyp,"signal type",ST,"PID Regler","PID control",PID,Reglereingang,"controller input",CTRL.IN
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,Taster,button,BT
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Taster,button,BT
-System,system,SYS,Behälter,tank,TNK,Pumpensumpf,"pump sump",PU.SMP
-System,system,SYS,Behälter,tank,TNK,Wasserbehälter,"water tank",WS.TANK
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Fernquittierung,"remote acknowledgement",REM.ACK
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Stopp,stop,STOP
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Stopp,stop,STOP
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Stopp,stop,STOP
-Signaltyp,"signal type",ST,Schaltbefehl,"switching command",COM.SWI,Stopp,stop,STOP
-Raum,room,R,"Sonstige Nutzung","other use",OTH,"Duschen und Umkleiden","shower and locker room",WASH.LOCK
-System,system,SYS,Raumautomation,"room automation",RA,Datenschnittstelleneinheit,"data interface unit",DIU
-Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,Datenschnittstelleneinheit,"data interface unit",DIU
-Signaltyp,"signal type",ST,"PID Regler","PID control",PID,Reglerausgang,"controller output",CTRL.OUT
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Reglerausgang,"controller output",CTRL.OUT
-Signaltyp,"signal type",ST,Regelung,control,CTRL,Reglereingang,"controller input",CTRL.IN
-System,system,SYS,Schalter,switch,SWI,eingeschaltet,on,ON
-System,system,SYS,Schalter,switch,SWI,ausgeschaltet,off,OFF
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Elektrisch,electrical,EL
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Elektrisch,electrical,EL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Elektrisch,electrical,EL
-System,system,SYS,Vorerhitzer,preheater,H.PR,Wassererhitzer,"water heater",WS
-System,system,SYS,Vorerhitzer,preheater,H.PR,Wasserlufterhitzer,"water air heater",AIR.WS
-System,system,SYS,Nacherhitzer,reheater,H.RE,Wassererhitzer,"water heater",WS
-System,system,SYS,Nacherhitzer,reheater,H.RE,Wasserlufterhitzer,"water air heater",AIR.WS
-System,system,SYS,"Nutzungsspezifische und verfahrenstechnische Anlage","usage-specific and process-engineering plant",USAS,Exhaustor,exhaustor,EXH
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,Haupt,main,MN
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Haupt,main,MN
-System,system,SYS,"Raumlufttechnische Anlage","air handling unit",AHU,Raumklimagerät,"room air conditioner",R.AC
-System,system,SYS,"Abwasser-, Wasser-, Gasanlage","sewage, water, gas plant",SWG,Frischwasserstation,"fresh water station",W.FRS
-Medium,medium,MED,Wasser,water,WS,Frischwasser,"fresh water",FRS
-System,system,SYS,"Abwasser-, Wasser-, Gasanlage","sewage, water, gas plant",SWG,Haushaltswarmwasserbereitung,"domestic hot water system",WS.DH
-Medium,medium,MED,Wasser,water,WS,Haushaltswarmwasser,"domestic hot water",DH
-System,system,SYS,Schalter,switch,SWI,"Manueller Betrieb","manual operation",OPR.MANU
-System,system,SYS,Schalter,switch,SWI,Veranstaltungsschalter,"event switch",EVNT
-System,system,SYS,"Nutzungsspezifische und verfahrenstechnische Anlage","usage-specific and process-engineering plant",USAS,Hygienestation,"hygiene station",HYG
-Gebäude,building,B,"Gebäude für kulturelle Zwecke","building for cultural purposes",CUL,Kulissenhaus,"scenery house",SCN
-Signaltyp,"signal type",ST,Anzeige,display,DIS,Lampe,lamp,LMP
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Anzeige,display,DIS,Lampe,lamp,LMP
-System,system,SYS,Anzeige,display,DIS,Lampe,lamp,LMP
-Signaltyp,"signal type",ST,Wartungsmeldung,"maintenance message",MM,Austausch,replacement,RPLC
-Medium,medium,MED,Wasser,water,WS,Oberflächenwasser,"surface water",SURF
-Signaltyp,"signal type",ST,Taster,button,BT,Rückstellung,reset,RST
-System,system,SYS,Taster,button,BT,Rückstellung,reset,RST
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Sanitärmeldung,"sanitary message",SAN
-Signaltyp,"signal type",ST,Wartungsmeldung,"maintenance message",MM,Sanitärmeldung,"sanitary message",SAN
-Medium,medium,MED,Wasser,water,WS,Abwasser,sewage,SEW
-System,system,SYS,Schalter,switch,SWI,Schlüsselschalter,"key switch",KEY
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,Schnittstelle,interface,IFC
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Schnittstelle,interface,IFC
-Gebäude,building,B,"Gebäude für Bildung und Forschung","building for education and research",EDU.RESEA,Grundschule,"elementary school",ELEM.SCHO
-Gebäude,building,B,"Gebäude für Bildung und Forschung","building for education and research",EDU.RESEA,"Weiterführende Schule","high school",HIG.SCHO
-Gebäude,building,B,"Gebäude für Bildung und Forschung","building for education and research",EDU.RESEA,Schule,school,SCHO
-Medium,medium,MED,Spannungsversorgung,"voltage supply",V.SUP,"220 V","220 V",V.220
-Signaltyp,"signal type",ST,Anzeige,display,DIS,Taster,button,BT
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Anzeige,display,DIS,Taster,button,BT
-System,system,SYS,Anzeige,display,DIS,Taster,button,BT
-Signaltyp,"signal type",ST,"Berechneter Wert","calculated value",CALCV,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-Signaltyp,"signal type",ST,Stellbefehl,"positioning command",COM.POS,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-System,system,SYS,Sensor,sensor,SEN,"Thermoelektrischer Kontakt","thermoelectric contact",COTC.THEL
-System,system,SYS,Schalter,switch,SWI,Wartung,maintenance,MNT
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Zusatzmeldung,"additional message",ADD2
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,Betriebsmeldung,"status message",STAT
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Betriebsmeldung,"status message",STAT
-Signaltyp,"signal type",ST,Betriebsmeldung,"status message",STAT,Kommunikation,communication,COMUC
-System,system,SYS,Raumautomation,"room automation",RA,Koordinator,coordinator,COO
-Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,Koordinator,coordinator,COO
-System,system,SYS,Gebäudeautomation,"building automation",BA,Koordinator,coordinator,COO
-Steuerungsgerät,"control device",CD,Gebäudeautomation,"building automation",BA,Koordinator,coordinator,COO
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,Rauch,smoke,SM
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,Rauch,smoke,SM
-System,system,SYS,Raumautomation,"room automation",RA,"Adaptives Tuning","adaptive tuning",ADAP
-Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,"Adaptives Tuning","adaptive tuning",ADAP
-System,system,SYS,Gebäudeautomation,"building automation",BA,"Adaptives Tuning","adaptive tuning",ADAP
-Steuerungsgerät,"control device",CD,Gebäudeautomation,"building automation",BA,"Adaptives Tuning","adaptive tuning",ADAP
-System,system,SYS,Raumautomation,"room automation",RA,Optimierer,optimizer,OPTI
-Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,Optimierer,optimizer,OPTI
-System,system,SYS,Gebäudeautomation,"building automation",BA,Optimierer,optimizer,OPTI
-Steuerungsgerät,"control device",CD,Gebäudeautomation,"building automation",BA,Optimierer,optimizer,OPTI
-Steuerungsgerät,"control device",CD,"Spezieller Regler","special controller",SPEC,Spülen,flush,FLUSH
-System,system,SYS,Wächter,monitor,MON,Feuchtigkeit,humidity,HUM
-Steuerungsgerät,"control device",CD,Wächter,monitor,MON,Feuchtigkeit,humidity,HUM
-Signaltyp,"signal type",ST,"Berechneter Wert","calculated value",CALCV,Luftqualität,"air quality",AQ
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,Luftqualität,"air quality",AQ
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,Luftqualität,"air quality",AQ
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,Luftqualität,"air quality",AQ
-Signaltyp,"signal type",ST,Messwert,"measured value",MEA,Luftqualität,"air quality",AQ
-Signaltyp,"signal type",ST,Stellbefehl,"positioning command",COM.POS,Luftqualität,"air quality",AQ
-System,system,SYS,Sensor,sensor,SEN,Luftqualität,"air quality",AQ
-Signaltyp,"signal type",ST,"Überwachter Wert","monitored value",MONV,Luftqualität,"air quality",AQ
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, Kaskade","temperature and humidity controller, cascade",T.HUM.CASC
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, modulierend","temperature and humidity controller, modulating",T.HUM.MODU
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 1-stufig","temperature and humidity controller, 1-step",T.HUM.1.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 2-stufig","temperature and humidity controller, 2-step",T.HUM.2.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 3-stufig","temperature and humidity controller, 3-step",T.HUM.3.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 4-stufig","temperature and humidity controller, 4-step",T.HUM.4.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 5-stufig","temperature and humidity controller, 5-step",T.HUM.5.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 6-stufig","temperature and humidity controller, 6-step",T.HUM.6.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 7-stufig","temperature and humidity controller, 7-step",T.HUM.7.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, 8-stufig","temperature and humidity controller, 8-step",T.HUM.8.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, stetig","temperature and humidity controller, continuous",T.HUM.CONT
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, Hysterese","temperature and humidity controller, hysteresis",T.HUM.HYS
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, Kaskade","frost protection controller, cascade",FROS.CASC
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, modulierend","frost protection controller, modulating",FROS.MODU
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, stetig","frost protection controller, continuous",FROS.CONT
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, Hysterese","frost protection controller, hysteresis",FROS.HYS
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, Kaskade","pressure controller, cascade",P.CASC
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, modulierend","pressure controller, modulating",P.MODU
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 1-stufig","pressure controller, 1-step",P.1.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 2-stufig","pressure controller, 2-step",P.2.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 3-stufig","pressure controller, 3-step",P.3.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 4-stufig","pressure controller, 4-step",P.4.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 5-stufig","pressure controller, 5-step",P.5.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 6-stufig","pressure controller, 6-step",P.6.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 7-stufig","pressure controller, 7-step",P.7.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, 8-stufig","pressure controller, 8-step",P.8.STEP
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, stetig","pressure controller, continuous",P.CONT
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, Hysterese","pressure controller, hysteresis",P.HYS
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, Kaskade","temperature controller, cascade",T.CASC
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, modulierend","temperature controller, modulating",T.MODU
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 1-stufig","temperature controller, 1-step",T.1.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 2-stufig","temperature controller, 2-step",T.2.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 3-stufig","temperature controller, 3-step",T.3.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 4-stufig","temperature controller, 4-step",T.4.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 5-stufig","temperature controller, 5-step",T.5.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 6-stufig","temperature controller, 6-step",T.6.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 7-stufig","temperature controller, 7-step",T.7.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, 8-stufig","temperature controller, 8-step",T.8.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, stetig","temperature controller, continuous",T.CONT
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, Hysterese","temperature controller, hysteresis",T.HYS
-Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, Kaskade","humidity controller, cascade",HUM.CASC
-Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, modulierend","humidity controller, modulating",HUM.MODU
-Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, stetig","humidity controller, continuous",HUM.CONT
-Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, Hysterese","humidity controller, hysteresis",HUM.HYS
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, Kaskade","fan controller, cascade",FAN.CASC
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, modulierend","fan controller, modulating",FAN.MODU
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 1-stufig","fan controller, 1-step",FAN.1.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 2-stufig","fan controller, 2-step",FAN.2.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 3-stufig","fan controller, 3-step",FAN.3.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 4-stufig","fan controller, 4-step",FAN.4.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 5-stufig","fan controller, 5-step",FAN.5.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 6-stufig","fan controller, 6-step",FAN.6.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 7-stufig","fan controller, 7-step",FAN.7.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, 8-stufig","fan controller, 8-step",FAN.8.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, stetig","fan controller, continuous",FAN.CONT
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, Hysterese","fan controller, hysteresis",FAN.HYS
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, Kaskade","compressor controller, cascade",COMP.CASC
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, modulierend","compressor controller, modulating",COMP.MODU
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 1-stufig","compressor controller, 1-step",COMP.1.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 2-stufig","compressor controller, 2-step",COMP.2.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 3-stufig","compressor controller, 3-step",COMP.3.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 4-stufig","compressor controller, 4-step",COMP.4.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 5-stufig","compressor controller, 5-step",COMP.5.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 6-stufig","compressor controller, 6-step",COMP.6.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 7-stufig","compressor controller, 7-step",COMP.7.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, 8-stufig","compressor controller, 8-step",COMP.8.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, stetig","compressor controller, continuous",COMP.CONT
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, Hysterese","compressor controller, hysteresis",COMP.HYS
-Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,"Luftqualitätsregler, Kaskade","air quality controller, cascade",AQ.CASC
-Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,"Luftqualitätsregler, modulierend","air quality controller, modulating",AQ.MODU
-Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,"Luftqualitätsregler, stetig","air quality controller, continuous",AQ.CONT
-Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,"Luftqualitätsregler, Hysterese","air quality controller, hysteresis",AQ.HYS
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, Kaskade","equipment controller, cascade",EQ.CASC
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, modulierend","equipment controller, modulating",EQ.MODU
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 1-stufig","equipment controller, 1-step",EQ.1.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 2-stufig","equipment controller, 2-step",EQ.2.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 3-stufig","equipment controller, 3-step",EQ.3.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 4-stufig","equipment controller, 4-step",EQ.4.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 5-stufig","equipment controller, 5-step",EQ.5.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 6-stufig","equipment controller, 6-step",EQ.6.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 7-stufig","equipment controller, 7-step",EQ.7.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, 8-stufig","equipment controller, 8-step",EQ.8.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, stetig","equipment controller, continuous",EQ.CONT
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, Hysterese","equipment controller, hysteresis",EQ.HYS
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, external","equipment controller, extern",EQ.EXT
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, Kaskade","heating controller, cascade",H.CASC
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, modulierend","heating controller, modulating",H.MODU
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 1-stufig","heating controller, 1-step",H.1.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 2-stufig","heating controller, 2-step",H.2.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 3-stufig","heating controller, 3-step",H.3.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 4-stufig","heating controller, 4-step",H.4.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 5-stufig","heating controller, 5-step",H.5.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 6-stufig","heating controller, 6-step",H.6.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 7-stufig","heating controller, 7-step",H.7.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, 8-stufig","heating controller, 8-step",H.8.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, stetig","heating controller, continuous",H.CONT
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, Hysterese","heating controller, hysteresis",H.HYS
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, external","heating controller, extern",H.EXT
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, Kaskade","cooling controller, cascade",C.CASC
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, modulierend","cooling controller, modulating",C.MODU
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 1-stufig","cooling controller, 1-step",C.1.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 2-stufig","cooling controller, 2-step",C.2.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 3-stufig","cooling controller, 3-step",C.3.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 4-stufig","cooling controller, 4-step",C.4.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 5-stufig","cooling controller, 5-step",C.5.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 6-stufig","cooling controller, 6-step",C.6.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 7-stufig","cooling controller, 7-step",C.7.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, 8-stufig","cooling controller, 8-step",C.8.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, stetig","cooling controller, continuous",C.CONT
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, Hysterese","cooling controller, hysteresis",C.HYS
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, external","cooling controller, extern",C.EXT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Kaskade","ventilation controller, cascade",VENT.CASC
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Kaskade","ventilation controller, cascade",VENT.CASC
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Kaskade","ventilation controller, cascade",VENT.CASC
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, modulierend","ventilation controller, modulating",VENT.MODU
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, modulierend","ventilation controller, modulating",VENT.MODU
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, modulierend","ventilation controller, modulating",VENT.MODU
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 1-stufig","ventilation controller, 1-step",VENT.1.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 1-stufig","ventilation controller, 1-step",VENT.1.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 1-stufig","ventilation controller, 1-step",VENT.1.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 2-stufig","ventilation controller, 2-step",VENT.2.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 2-stufig","ventilation controller, 2-step",VENT.2.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 2-stufig","ventilation controller, 2-step",VENT.2.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 3-stufig","ventilation controller, 3-step",VENT.3.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 3-stufig","ventilation controller, 3-step",VENT.3.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 3-stufig","ventilation controller, 3-step",VENT.3.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 4-stufig","ventilation controller, 4-step",VENT.4.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 4-stufig","ventilation controller, 4-step",VENT.4.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 4-stufig","ventilation controller, 4-step",VENT.4.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 5-stufig","ventilation controller, 5-step",VENT.5.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 5-stufig","ventilation controller, 5-step",VENT.5.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 5-stufig","ventilation controller, 5-step",VENT.5.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 6-stufig","ventilation controller, 6-step",VENT.6.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 6-stufig","ventilation controller, 6-step",VENT.6.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 6-stufig","ventilation controller, 6-step",VENT.6.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 7-stufig","ventilation controller, 7-step",VENT.7.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 7-stufig","ventilation controller, 7-step",VENT.7.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 7-stufig","ventilation controller, 7-step",VENT.7.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 8-stufig","ventilation controller, 8-step",VENT.8.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 8-stufig","ventilation controller, 8-step",VENT.8.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, 8-stufig","ventilation controller, 8-step",VENT.8.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stetig","ventilation controller, continuous",VENT.CONT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stetig","ventilation controller, continuous",VENT.CONT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stetig","ventilation controller, continuous",VENT.CONT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Hysterese","ventilation controller, hysteresis",VENT.HYS
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Hysterese","ventilation controller, hysteresis",VENT.HYS
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Hysterese","ventilation controller, hysteresis",VENT.HYS
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, external","ventilation controller, extern",VENT.EXT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, external","ventilation controller, extern",VENT.EXT
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, external","ventilation controller, extern",VENT.EXT
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, stufig","equipment controller, step",EQ.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stufig","ventilation controller, step",VENT.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stufig","ventilation controller, step",VENT.STEP
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, stufig","ventilation controller, step",VENT.STEP
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, stufig","temperature and humidity controller, step",T.HUM.STEP
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, stufig","frost protection controller, step",FROS.CASC
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, stufig","pressure controller, step",P.STEP
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, stufig","temperature controller, step",T.STEP
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, stufig","fan controller, step",FAN.STEP
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, stufig","compressor controller, step",COMP.STEP
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, stufig","heating controller, step",H.STEP
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, stufig","cooling controller, step",C.STEP
-Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,"Anlagenregler, Energieeffizienz","equipment controller, energy efficiency",EQ.EN.EF
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Energieeffizienz","ventilation controller, energy efficiency",VENT.EN.EF
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Energieeffizienz","ventilation controller, energy efficiency",VENT.EN.EF
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,"Lüftungsregler, Energieeffizienz","ventilation controller, energy efficiency",VENT.EN.EF
-Steuerungsgerät,"control device",CD,"Temperatur- und Feuchteregelung","temperature and humidity controller",T.HUM,"Temperatur- und Feuchteregler, Energieeffizienz","temperature and humidity controller, energy efficiency",T.HUM.EN.EF
-Steuerungsgerät,"control device",CD,Frostschutzregler,"frost protection controller",FROS,"Frostschutzregler, Energieeffizienz","frost protection controller, energy efficiency",FROS.EN.EF
-Steuerungsgerät,"control device",CD,Druckregler,"pressure controller",P,"Druckregler, Energieeffizienz","pressure controller, energy efficiency",P.EN.EF
-Steuerungsgerät,"control device",CD,Temperaturregler,"temperature controller",T,"Temperaturregler, Energieeffizienz","temperature controller, energy efficiency",T.EN.EF
-Steuerungsgerät,"control device",CD,Ventilatorregler,"fan controller",FAN,"Ventilatorregler, Energieeffizienz","fan controller, energy efficiency",FAN.EN.EF
-Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",COMP,"Verdichterregler, Energieeffizienz","compressor controller, energy efficiency",COMP.EN.EF
-Steuerungsgerät,"control device",CD,Heizungsregler,"heating controller",H,"Heizungsregler, Energieeffizienz","heating controller, energy efficiency",H.EN.EF
-Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,"Kühlungsregler, Energieeffizienz","cooling controller, energy efficiency",C.EN.EF
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, Kaskade","demand controller, cascade",DEM.CASC
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, modulierend","demand controller, modulating",DEM.MODU
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 1-stufig","demand controller, 1-step",DEM.1.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 2-stufig","demand controller, 2-step",DEM.2.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 3-stufig","demand controller, 3-step",DEM.3.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 4-stufig","demand controller, 4-step",DEM.4.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 5-stufig","demand controller, 5-step",DEM.5.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 6-stufig","demand controller, 6-step",DEM.6.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 7-stufig","demand controller, 7-step",DEM.7.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, 8-stufig","demand controller, 8-step",DEM.8.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, stetig","demand controller, continuous",DEM.CONT
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, Hysterese","demand controller, hysteresis",DEM.HYS
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, external","demand controller, extern",DEM.EXT
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, stufig","demand controller, step",DEM.STEP
-Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,"Bedarfsregler, Energieeffizienz","demand controller, energy efficiency",DEM.EN.EF
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, Kaskade","pump controller, cascade",PU.CASC
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, modulierend","pump controller, modulating",PU.MODU
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 1-stufig","pump controller, 1-step",PU.1.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 2-stufig","pump controller, 2-step",PU.2.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 3-stufig","pump controller, 3-step",PU.3.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 4-stufig","pump controller, 4-step",PU.4.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 5-stufig","pump controller, 5-step",PU.5.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 6-stufig","pump controller, 6-step",PU.6.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 7-stufig","pump controller, 7-step",PU.7.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, 8-stufig","pump controller, 8-step",PU.8.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, stetig","pump controller, continuous",PU.CONT
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, Hysterese","pump controller, hysteresis",PU.HYS
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, external","pump controller, extern",PU.EXT
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, stufig","pump controller, step",PU.STEP
-Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,"Pumpenregler, Energieeffizienz","pump controller, energy efficiency",PU.EN.EF
-Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,"Luftqualitätsregler, Energieeffizienz","air quality controller, energy efficiency",AQ.EN.EF
-Steuerungsgerät,"control device",CD,Feuchtigkeitsregler,"humidity controller",HUM,"Feuchteregler, Energieeffizienz","humidity controller, energy efficiency",HUM.HYS
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, Kaskade","hot water controller, cascade",DH.CASC
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, modulierend","hot water controller, modulating",DH.MODU
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 1-stufig","hot water controller, 1-step",DH.1.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 2-stufig","hot water controller, 2-step",DH.2.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 3-stufig","hot water controller, 3-step",DH.3.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 4-stufig","hot water controller, 4-step",DH.4.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 5-stufig","hot water controller, 5-step",DH.5.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 6-stufig","hot water controller, 6-step",DH.6.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 7-stufig","hot water controller, 7-step",DH.7.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, 8-stufig","hot water controller, 8-step",DH.8.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, stetig","hot water controller, continuous",DH.CONT
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, Hysterese","hot water controller, hysteresis",DH.HYS
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, external","hot water controller, extern",DH.EXT
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, stufig","hot water controller, step",DH.STEP
-Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,"Warmwasserregler, Energieeffizienz","hot water controller, energy efficiency",DH.EN.EF
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,offen/öffnen,open,OP
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,offen/öffnen,open,OP
-Signaltyp,"signal type",ST,Störung,malfunction,MALF,geschlossen/schließen,closed/close,CL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Störung,malfunction,MALF,geschlossen/schließen,closed/close,CL
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,offen/öffnen,open,OP
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,offen/öffnen,open,OP
-Signaltyp,"signal type",ST,Alarm,alarm,ALA,geschlossen/schließen,closed/close,CL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Alarm,alarm,ALA,geschlossen/schließen,closed/close,CL
-Signaltyp,"signal type",ST,Taster,button,BT,Präsenz,presence,PRES
-System,system,SYS,Taster,button,BT,Präsenz,presence,PRES
-Signaltyp,"signal type",ST,Anzeige,display,DIS,Tableau,tableau,TAB
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Anzeige,display,DIS,Tableau,tableau,TAB
-System,system,SYS,Anzeige,display,DIS,Tableau,tableau,TAB
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,offen/öffnen,open,OP
-Signaltyp,"signal type",ST,"Geregelter Wert","controlled value",CV,geschlossen/schließen,closed/close,CL
-Medium,medium,MED,Luft,air,AIR,Abluft,"extract air",ETA
-Medium,medium,MED,Luft,air,AIR,Umluft,"recirculation air",RCA
-Medium,medium,MED,Luft,air,AIR,"Zu- und Abluft","supply and extract air",SUP.ETA
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 1","mezzanine 1",MEZ.1
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 2","mezzanine 2",MEZ.2
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 3","mezzanine 3",MEZ.3
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 4","mezzanine 4",MEZ.4
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 5","mezzanine 5",MEZ.5
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 6","mezzanine 6",MEZ.6
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 7","mezzanine 7",MEZ.7
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 8","mezzanine 8",MEZ.8
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 9","mezzanine 9",MEZ.9
-Geschoss,floor,FL,Zwischengeschoss,mezzanine,MEZ,"Zwischengeschoss 10","mezzanine 10",MEZ.10
-Signaltyp,"signal type",ST,Rückmeldung,feedback,FB,Fernzugriff,"remote access",REM.ACCS
-System,system,SYS,Sensor,sensor,SEN,Multisensor,"multi sensor",MUL
+Medium,medium,MED,Wasser,water,WS,"Zu- und Ablauf","influx and drainage",IFX.DRAI
 System,system,SYS,Betonkerntemperierung,"concrete core activation",CCA,NULL,NULL,NULL
 System,system,SYS,"Blockheizkraftwerk (BHKW)","combined heat and power",CHP,NULL,NULL,NULL
 System,system,SYS,Fernkälte,"district cooling",C.DISTR,NULL,NULL,NULL
@@ -3717,7 +3146,6 @@ Signaltyp,"signal type",ST,Scheduler,scheduler,SCH,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Loop-MAX-Begrenzung,"loop MAX limit",LOO.LIM.MAX,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Loop-MIN-Begrenzung,"loop MIN limit",LOO.LIM.MIN,NULL,NULL,NULL
 System,system,SYS,Wasseraufbereitung,"water treatment",WTR,NULL,NULL,NULL
-System,system,SYS,Licht,light,LI,NULL,NULL,NULL
 System,system,SYS,Jalousie,blind,BLI,NULL,NULL,NULL
 System,system,SYS,Gerät,device,D,NULL,NULL,NULL
 System,system,SYS,Fassade,facade,FAC,NULL,NULL,NULL
@@ -4203,7 +3631,6 @@ Gewerk,"maintenance group",MG,Brandschutz,"fire safety",FIRE,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,stufig,stepped,STEP,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,solar,solar,SOL,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Legionellenschutz,"legionella protection",PT.LEG,NULL,NULL,NULL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Wärmerückgewinnung,"heat recovery",HRC,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Rückkühlung,recooling,C.RE,NULL,NULL,NULL
 System,system,SYS,Kälteübertrager,"cooling exchanger",CX,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Zusatzfunktion,"additional function",ADD1,NULL,NULL,NULL
@@ -4215,7 +3642,7 @@ Gewerk,"maintenance group",MG,Abzug,"exhaust hood",EXH,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Holen von Daten","get data",GET,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Bereitstellen von Daten","provide data",PVD,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Umschaltung Sommer/Winter","summer/winter switchover",SU.WI,NULL,NULL,NULL
-"Medium 2. Spezifizierung","medium 2nd specification",MED2,Zulauf,influx,INFX,NULL,NULL,NULL
+"Medium 2. Spezifizierung","medium 2nd specification",MED2,Zulauf,influx,IFX,NULL,NULL,NULL
 "Medium 2. Spezifizierung","medium 2nd specification",MED2,Ablauf,"water drainage",DRAI,NULL,NULL,NULL
 Gewerk,"maintenance group",MG,Raum,room,R,NULL,NULL,NULL
 "Typ der Netzwerkanbindung","network protocol",NP,M-Bus,M-Bus,MBUS,NULL,NULL,NULL
@@ -4273,7 +3700,6 @@ Gewerk,"maintenance group",MG,"Wärme und Kälte",heating/cooling,HC,NULL,NULL,N
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Gleitender Mittelwert","moving average",AV.MOV,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"nächste Betriebsart","next operating mode",OPR.MOD.NXT,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Verlängerung,prolongation,PRLG,NULL,NULL,NULL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Schutz,protection,PT,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"untere Reglergrenze","lower controller limit",LIM.LOW,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"unterer Schaltwert","lower switching value",SV.LOW,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Pulsdauermodulation,"pulse-width modulation",PWM,NULL,NULL,NULL
@@ -4292,7 +3718,6 @@ Gewerk,"maintenance group",MG,"Wärme und Kälte",heating/cooling,HC,NULL,NULL,N
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,direktwirkend,"direct acting",DIR.ACTG,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Wirksinn,"direction of action",DOA,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,aktiv,active,ACT,NULL,NULL,NULL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Adaptives Tuning","adaptive tuning",ADAP,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Gleichgewicht,balance,BLNC,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Basis,basis,BSS,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Raumanforderung Kühlen","request room cooling",REQ.R.C,NULL,NULL,NULL
@@ -4370,8 +3795,8 @@ Zone,zone,Z,Straßenseite,"street side",STR,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Befeuchtungsanforderung,"request humidification",REQ.HUM,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Raumbefeuchtungsanforderung,"request room humidification",REQ.R.HUM,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Betriebsart,"operating mode",OPR.MOD,NULL,NULL,NULL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Grenzwert maximal Nacht","maximum limit night",LIM.MAX,NULL,NULL,NULL
-"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Grenzwert minimal Nacht","minimum limit night",LIM.MIN,NULL,NULL,NULL
+"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Grenzwert maximal Nacht","maximum limit night",LIM.MAX.NIG,NULL,NULL,NULL
+"Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Grenzwert minimal Nacht","minimum limit night",LIM.MIN.NIG,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Sollwert Kühlen, Abweichung","cooling setpoint, deviation",SP.C.DEV,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,"Sollwert Heizen, Abweichung","heating setpoint, deviation",SP.H.DEV,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Ladung,load,LOA,NULL,NULL,NULL
@@ -4557,7 +3982,6 @@ Steuerungsgerät,"control device",CD,Raumautomation,"room automation",RA,NULL,NU
 Steuerungsgerät,"control device",CD,Wächter,monitor,MON,NULL,NULL,NULL
 "Medium 2. Spezifizierung","medium 2nd specification",MED2,Bedarf,demand,DEM,NULL,NULL,NULL
 Steuerungsgerät,"control device",CD,Gebäudeautomation,"building automation",BA,NULL,NULL,NULL
-System,system,SYS,Erzeugung,generation,GEN,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Zeitprogramm,"time program",PRG.TIM,NULL,NULL,NULL
 "Signaltyp 2. Spezifizierung","signal type 2nd specification",ST2,Rauchabzug,"smoke extraction",SM.ETA,NULL,NULL,NULL
 System,system,SYS,Medienversorgung,"media supply",SUP,NULL,NULL,NULL
@@ -4585,8 +4009,6 @@ Steuerungsgerät,"control device",CD,Verdichterregelung,"compressor controller",
 Steuerungsgerät,"control device",CD,Luftqualitätsregler,"air quality controller",AQ,NULL,NULL,NULL
 Steuerungsgerät,"control device",CD,Anlagenregler,"equipment controller",EQ,NULL,NULL,NULL
 Steuerungsgerät,"control device",CD,Kühlungsregler,"cooling controller",C,NULL,NULL,NULL
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,NULL,NULL,NULL
-Steuerungsgerät,"control device",CD,Lüftungsregler,"ventilation controller",VENT,NULL,NULL,NULL
 Steuerungsgerät,"control device",CD,Bedarfsregler,"demand controller",DEM,NULL,NULL,NULL
 Steuerungsgerät,"control device",CD,Pumpenregler,"pump controller",PU,NULL,NULL,NULL
 Steuerungsgerät,"control device",CD,Warmwasserregler,"hot water controller",DH,NULL,NULL,NULL
@@ -4602,3 +4024,6 @@ Planart,"plan type",PL,Objektlisten,"Object listings",A2P,NULL,NULL,NULL
 Planart,"plan type",PL,"Qualitätsmanagementdokumente und Sicherheit beschreibende Dokumente","Quality management documents, safety-describing documents",A2Q,NULL,NULL,NULL
 Planart,"plan type",PL,"Dokumente zur Beschreibung geometrischer Formen","Geometry-related documents",A2T,NULL,NULL,NULL
 Planart,"plan type",PL,"Betriebliche Protokolle und Aufzeichnungen","Operation records",A2W,NULL,NULL,NULL
+NULL,NULL,NULL,Erzeugung,generation,GEN,Wärme,heat,H
+NULL,NULL,NULL,Erzeugung,generation,GEN,Elektrisch,electrical,EL
+NULL,NULL,NULL,Erzeugung,generation,GEN,Kälte,chill,CH
