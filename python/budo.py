@@ -2,7 +2,6 @@ import configparser
 import pymysql
 import pandas as pd
 import re
-import pyld
 import warnings
 
 
@@ -65,7 +64,7 @@ class Budo(object):
             cas = df[df['category_english'] == name_category]['ca_english'].unique()
             df_cas = df[df['category_english'] == name_category]
             for ca in cas:
-                if ca is not None:
+                if ca != None:
                     dict_ca = dict()
                     dict_ca["name_english"] = ca
                     dict_ca["name_german"] = df_cas[df_cas.ca_english == ca]["ca_german"].iloc[0]
@@ -74,20 +73,20 @@ class Budo(object):
                     children = df_cas[df_cas.ca_english == ca]['children_english'].tolist()
 
                     for child in children:
-                        if child is not None:
+                        if child != None:
                             dict_child = dict()
                             dict_child["name_english"] = child
                             dict_child["name_german"] = df_ca[df_ca.children_english == child]["children_german"].iloc[0]
 
                             budo_child = df_ca[df_ca.children_english == child]["children_budo"].iloc[0]
-                            if budo_child is not None:
+                            if budo_child != None:
                                 if budo_cat in cat_budo_stand:
                                     dict_ca[budo_child] = dict_child
                                 else:
                                     dict_cat[budo_child] = dict_child
 
                     budo_ca = df_cas[df_cas.ca_english == ca]["ca_budo"].iloc[0]
-                    if budo_ca is not None:
+                    if budo_ca != None:
                         dict_cat[budo_ca] = dict_ca
             dict_all[budo_cat] = dict_cat
         return dict_all
@@ -125,7 +124,7 @@ class Budo(object):
 
                             for m, chunk in enumerate(chunks, start=0):
                                 if m == 0:
-                                    if translate and chunk is not "":
+                                    if translate and chunk != "":
                                         if i in [0, 2]:
                                             budo_cat = chunk
                                             dict_key[name_category] = self.dict_cpc[budo_cat][
@@ -138,7 +137,7 @@ class Budo(object):
                                     else:
                                         dict_key[name_category] = chunk
                                 elif m == 1:
-                                    if translate and chunk is not "":
+                                    if translate and chunk != "":
                                         if i in [0, 2]:
                                             dict_key[name_category + " specification " + str(m)] = self.dict_cpc[
                                                 budo_cat][chunk]["name_" + language]
@@ -148,7 +147,7 @@ class Budo(object):
                                     else:
                                         dict_key[name_category + " specification " + str(m)] = chunk
                                 else:
-                                    if translate and chunk is not "":
+                                    if translate and chunk != "":
                                         # name_category_orig = categories_dict_orig[name_category + " specification " + str(m)]
                                         budo_spec = self.dict_cat_budo[name_category + " specification " + str(m)]
                                         dict_key[name_category + " specification " + str(m)] = self.dict_cpc[
@@ -164,25 +163,29 @@ class Budo(object):
 
 if __name__ == '__main__':
     import pprint
+    
+    budo_file = r"D:\Sciebo\GIT\budopy\budopy\budo_db.ini"
 
-    bt = Budo(language="German", translate=True)
+    bt = Budo(language="German", translate=True, budo_file=budo_file)
     # dict_all0 = bt.get_index()
     pp = pprint.PrettyPrinter(depth=5)
     # pp.pprint(bt.dict_cpc)
     budo_keys = [
-        "AE-abc_FL.CC+ROO-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_WST-01_SEN+P.ATM-01_WS+H+OUT+MID-1_MEA+T+SP-abc_AI§U+.C_B+GREEN_FL+BASE.1_DS-01_CG-01",
-        "AE-abc_FL.CC+BASE-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_CH+ADS-01_SEN+T-01_WS+H++MID-1_MEA++SP-abc_AI§U+T_B+GREEN_FL+BASE.1_DS-01_CG-01",
+        "AE-abc_FL.CC+ROO-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_WST-01_SEN+P.ATM-01_WS+H+OUT+MID-1_MEA+T+SP-abc_AI§U+.C_B+GRE_FL+BASE.1_DS-01_CG-01",
+        "AE-abc_FL.CC+BASE-00_CTRY-GER_SZ-01_CN.N-1§BOI+COND-01_CH+ADS-01_SEN+T-01_WS+H++MID-1_MEA++SP-abc_AI§U+T_B+GRE_FL+BASE.1_DS-01_CG-01",
         "B+RESP-4120_MG§CHP-01_SEN+T-01__WS+H+IN_MEA+T_§U+.C"]
 
 
 
 
     # dict_cc = bt.split(budo_keys)
-    #
+    
     # print(dict_cc)
 
     import timeit, functools
     t = timeit.Timer(functools.partial(bt.split, budo_keys, True))
+    
+    value = 0
     print(t.timeit(10))
     print(t.timeit(100))
     print(t.timeit(1000))

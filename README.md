@@ -19,7 +19,7 @@ Building energy systems are often incorrectly controlled and therefore unnecessa
 
 A team from E.ON ERC has tackled this problem and developed a standardized method for naming data points. This method is based on a method originally developed at Fraunhofer ISE for the designation of data points. This was further developed by E.ON ERC with the support of Fraunhofer ISE. It is entitled ```Buildings Unified Data point naming schema for Operation management``` (or ```BUDO Schema``` for short) and is specially designed for the demands of energy system analysis and operational management. It can be used in new and existing buildings. This means that developed automated methods can be implemented in both new and existing buildings.
 
-To make this key practical, an easy-to-use Excel tool has been developed. This allows the original name to be inserted and then named using the standardized naming scheme. The individual parts of the data point key can be selected in a dropdown menu and thus the name of a data point can be compiled. The tool can be called up under this [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table). If you only want to test BUDO, you can use our [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1irBxSYUZWAnswR2uyZlXsgReJTcwf_vETIxmwAzKYMQ/edit#gid=0) version: 
+To make this key practical, an easy-to-use Excel tool has been developed. This allows the original name to be inserted and then named using the standardized naming scheme. The individual parts of the data point key can be selected in a dropdown menu and thus the name of a data point can be compiled. The tool can be called up under this [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table). If you only want to test BUDO, you can use our [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1irBxSYUZWAnswR2uyZlXsgReJTcwf_vETIxmwAzKYMQ/edit#gid=0) version.
 
 # Structure
 
@@ -46,6 +46,14 @@ An instruction how to use the BUDO Creator can be found [here](https://github.co
 # Wiki of BUDO Schema
 
 In our [wiki](https://github.com/RWTH-EBC/BUDO/wiki), you can find some tutorials, documentations and recommendations of BUDO.
+
+# Contribute to BUDO Schema
+
+You can contribute to BUDO Schema via a [Github Issue](https://github.com/RWTH-EBC/BUDO/issues). The exact workflow is described [here](https://github.com/RWTH-EBC/BUDO/wiki/GIT-workflow).
+
+# Examples
+
+BUDO offers a description for different technical equipments. How this can be done for example equipments is described in a [Wiki article](https://github.com/RWTH-EBC/BUDO/wiki/Examples). The examples are sorted according to the categories of BUDO and the technical installations.
 
 # Reference
 
@@ -74,5 +82,5 @@ Bibtex:
 
 # Acknowledgement
 
-We thank the BMWi (Federal Ministry of Economics and Energy) for their financial support,
+We thank the BMWK (Federal Ministry for Economics and Climate Action) for their financial support,
 Contribution numbers 03ET1022A, 03SBE0006A, 03ET1373A.
