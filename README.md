@@ -53,7 +53,7 @@ You can contribute to BUDO Schema via a [Github Issue](https://github.com/RWTH-E
 
 # Examples
 
-BUDO offers a description for different technical equipments. How this can be done for example equipments is described in a [Wiki article](https://github.com/RWTH-EBC/BUDO/wiki/Examples). The examples are sorted according to the categories of BUDO and the technical installations.
+BUDO offers a description for different technical equipments. How this can be done for example equipments is described in a [Wiki article](https://github.com/RWTH-EBC/BUDO/wiki/Examples-BUDO). The examples are sorted according to the categories of BUDO and the technical equipments.
 
 # Reference
 
