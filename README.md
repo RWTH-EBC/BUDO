@@ -35,7 +35,7 @@ At the end, three more free categories can be added (e.g. unit). These are separ
 
 You can access the Excel BUDO Creator via the following [link](https://github.com/RWTH-EBC/BUDO/tree/master/Excel-Table). A Google Spreadsheet version is for testing available under the following [link](https://docs.google.com/spreadsheets/d/1irBxSYUZWAnswR2uyZlXsgReJTcwf_vETIxmwAzKYMQ/edit#gid=0). If you need a personal version of the Google Spreadsheet version, please contact the [BUDO Schema Team](mailto:info@budo-schema.de). We will provide the spreadsheet very soon.
 
-In the wiki article [How to compose a BUDO key label](Example-BUDO-label) explains by means of an example data stream how to compose a BUDO key label.
+In the wiki article [How to compose a BUDO key label](https://github.com/RWTH-EBC/BUDO/wiki/Example-BUDO-label) explains by means of an example data stream how to compose a BUDO key label.
 
 # Basic principles of BUDO
 
